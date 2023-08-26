@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html id="html" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title id="title">Starting Run...</title>
+    <link rel="stylesheet" href="http://192.168.178.27:5501/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/play.css">
+</head>
+
+<body class="overflow-hidden">
+
+    <div class="game-over bg-dark" style="display: none;">
+        <div class="d-flex justify-content-center align-items-center flex-column" style="height: 100vh;">
+            <div class="bg-dark rounded-4 p-5 text-center text-white ">
+                <div class="mb-4 p-4">
+                    <h1><span id="game-over-text">GAME OVER</span>!</h1>
+                    <h4><span id="score-game-over-text">Score</span>: <span id="game-over-score-display"></span></h4>
+                </div>
+                <div class="mb-3">
+                    <button onclick="restart()"
+                        class="btn btn-success rounded-5 w-100 d-flex align-items-center justify-content-center mb-3"><span
+                            class="fs-2" id="restart-button-55794">RESTART</span></button>
+                    <button onclick="leave()"
+                        class="btn btn-danger rounded-5 w-100 d-flex align-items-center justify-content-center"><span
+                            class="fs-2" id="leave-button-89132">LEAVE</span></button>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="game-overlay">
+        <div class="fixed-bottom container-fluid">
+            <div class="row">
+                <div class="col-12 d-block mx-auto">
+                    <button onclick="jump()" class="btn btn-dark rounded-5 mb-4 d-block d-xl-none shadow-lg w-100"
+                        style="scale: 1.4;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="32"
+                            fill="currentColor" class="bi bi-caret-up" viewBox="0 0 16 16">
+                            <path
+                                d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
+                        </svg></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="game-container">
+        <div id="ground"></div>
+        <div id="player"></div>
+        <div class="obstacles"></div>
+        <div class="container-fluid">
+            <div class="p-2 bg-dark col-12 col-md-2 text-white text-center rounded-4 mt-2 me-2">
+                <h2>Score: <span class="score-display">0</span></h2>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="./assets/js/play.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+{
+  "profile": {
+      "name": "Dario",
+      "surname": "Zygann",
+      "path": "http://192.168.178.27:5501/img/Avatare/png/enderman.png",
+      "email": "dario.zygann@gmail.com",
+      "password": "DarioGHG10",
+      "birthday": "2012-11-30",
+      "phone": "+49 160 2034708",
+      "gender": "male",
+      "pronaouce": "He / Him",
+      "adress": {
+          "number": 28,
+          "street": "Hirschbogen",
+          "city": "Tarp",
+          "zip": "24963",
+          "region": "SH",
+          "country": "DE"
+      },
+      "language": "de",
+      "color": "#000000",
+      "role": "member",
+      "banned": false,
+      "info": "Ich programmiere gerne."
+  },
+  "vodify": {
+      "aboStatus": true,
+      "name": "Vodify",
+      "path": "",
+      "price": 8.99,
+      "profiles": [
+          {
+              "name": "DarioGHG",
+              "path": "img290121",
+              "kids": false
+          },
+          {
+              "name": "Kids",
+              "path": "kids",
+              "kids": true
+          }
+      ]
+  },
+  "cloud_gaming": {
+      "gamername": "DarGHG",
+      "points": 3256,
+      "status": "Online",
+      "status_played": "Minecraft Technic 2",
+      "games": [
+          {
+              "game_id": "67199230647291786174076243823",
+              "currency": {
+                  "xp": 0,
+                  "lvl": 1,
+                  "bucks": 0,
+                  "bars": 0,
+                  "stars": 0,
+                  "battle_pass": false
+              },
+              "cosmetics": {
+                  "gliders": [
+                      {
+                          "name": "Standart Gleiter",
+                          "path": "",
+                          "rareity": "Common",
+                          "release": "Seasion 1 Kapitel 1",
+                          "info": "Der Standart Gleiter der in",
+                          "info_end": "eingeführt wurde."
+                      }
+                  ],
+                  "outfits": [
+                      {
+                          "name": "Standart Skin",
+                          "path": "",
+                          "rareity": "Common",
+                          "release": "Seasion 1 Kapitel 1",
+                          "info": "Der Standart Gleiter der in",
+                          "info_end": "eingeführt wurde."
+                      }
+                  ],
+                  "loadingScreens": [
+                      {
+                          "name": "Standart",
+                          "path": "",
+                          "rareity": "Common",
+                          "release": "Seasion 1 Kapitel 1",
+                          "info": "Der Standart Gleiter der in",
+                          "info_end": "eingeführt wurde."
+                      }
+                  ]
+              }
+          }
+      ]
+  },
+  "banking": {
+      "country": "DE",
+      "currency": [
+          {
+              "value": 1000000.00,
+              "name": "Creditcard",
+              "currency": "€",
+              "type": "Credit",
+              "country": "US",
+              "banned": false,
+              "id": "7t8z6fgn3q4x7g5683rqhxvt6hr783cd",
+              "iban": "US01 3690 0810 1763 6639 40"
+          }
+      ],
+      "crypto_currency": [
+          {
+              "value": 3000.40,
+              "name": "Bitcoin",
+              "currency": "BTC",
+              "banned": false,
+              "type": "Crypto",
+              "id": "987h234z87932897z543gtz",
+              "adress": "6t78hr34q2f678gh24rq3fcg87thv43dbt86h7cr32bh7f6rdc3t"
+          }
+      ]
+  },
+  "app_store": {
+      "purchased": {
+          "id": "12389504211612436512643125640125"
+      }
+  },
+  "simple_school": {
+      "class": 5,
+      "schools": [
+          {
+              "name": "Bernstorff-Gymnasium",
+              "startClass": 5.1,
+              "endClass": 10.2,
+              "location": {
+                  "number": 4,
+                  "street": "Am Gymnasium",
+                  "city": "Mittelangeln",
+                  "zip": "24986",
+                  "region": "SH",
+                  "country": "DE"
+              }
+          }
+      ],
+      "subjects": [
+          "Religon",
+          "Music",
+          "Art"
+      ]
+  },
+  "videoVault": {
+      "comments": [
+          {
+              "video_id": "w453tzgffc",
+              "text": "Sehr Cooles Video Bruder mach weiter so!"
+          }
+      ]
+  },
+  "mail": {
+      "mails": [
+          {
+              "sender": "mr.beast@gmail.com",
+              "size": "28 B",
+              "spam": false,
+              "trashed": false,
+              "label": "Register for Challange",
+              "cc": "",
+              "bb": "",
+              "mail_content": "Do you wan't to get 1.000.000 $ for playing hide and seek in a big football stadium.",
+              "attachment": "No Attachment"
+          }
+      ]
+  },
+  "search": {
+      "searchquerys": [
+          "MrBeast",
+          "WannaBe",
+          "tdbricks",
+          "Warum ist Apple so teuer?",
+          "DZ Account"
+      ]
+  }
+}

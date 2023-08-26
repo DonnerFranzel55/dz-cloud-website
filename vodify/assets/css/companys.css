@@ -1,0 +1,32 @@
+.Prime{
+    background-color: #219bff;
+    color: #000000;
+}
+
+.Netflix{
+    background-color: #000000;
+    color: #e6111b;
+}
+
+.Disney{
+    background-color: #081146;
+    color: #ffffff;
+}
+.Magenta{
+    background-color: #101010;
+    color: #e20074;
+}
+
+/*BG*/
+.bg-disney{
+    background-color: #081146;
+}
+.bg-prime{
+    background-color: #219bff;
+}
+.bg-netflix{
+    background-color: #000000;
+}
+.bg-gray{
+    background-color: #313131;
+}

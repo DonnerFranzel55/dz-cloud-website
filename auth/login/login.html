@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmelden - DZ Account</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <script src="/assets/js/auth.js"></script>
+    <script src="http://192.168.178.27:5501/pck/bootstrap/v5.3.1/js/bootstrap.js"></script>
+    <script src="http://192.168.178.27:5501/pck/bootstrap/v5.3.1/js/bootstrap.bundle.js"></script>
+    <script src="http://192.168.178.27:5501/pck/bootstrap/v5.3.1/js/bootstrap.min.js"></script>
+    <script src="http://192.168.178.27:5501/pck/bootstrap/v5.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="http://192.168.178.27:5501/js/bootstrap.esm.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="card-title">Login</h1>
+                        <form onsubmit="login(); return false;">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" placeholder="E-Mail Adresse" id="user-email-input" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" placeholder="Password" id="user-password-input" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="checkbox" id="user-checkbox-input" class="form-switch">
+                                <label for="remember" class="form-label">Angemeldet bleiben</label>
+                            </div>
+                            <div class="mb-3">
+                                <input type="submit" value="Login" class="btn btn-primary w-100">
+                            </div>
+                        </form>
+                        <div class="text-center">
+                            <a href="/forgot-password">Forgot password?</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

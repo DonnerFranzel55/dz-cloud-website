@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="de" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, orientation=landscape">
+    <title id="title">Strem is about to start...</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <script src="/vodify/assets/js/stream.js"></script>
+    <script src="http://192.168.178.27:5501/pck/bootstrap/v5.3.1/js/bootstrap.js"></script>
+    <script src="http://192.168.178.27:5501/pck/bootstrap/v5.3.1/js/bootstrap.bundle.js"></script>
+    <script src="http://192.168.178.27:5501/pck/bootstrap/v5.3.1/js/bootstrap.min.js"></script>
+    <script src="http://192.168.178.27:5501/pck/bootstrap/v5.3.1/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .video-player {
+            width: 100%;
+        }
+
+        .video-container {
+            display: flex;
+            position: relative;
+            background-color: #000000;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .video-res {
+            width: 100%;
+            max-width: 1640px;
+            position: relative;
+        }
+
+
+        /* Überlagerndes Div mit absoluter Positionierung */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            /* Du kannst hier auch weitere Stile wie z.B. Schriftarten, Farben, etc. hinzufügen */
+        }
+
+
+        .hover-light {
+            margin: 0;
+        }
+
+        .hover-light:hover {
+            color: #f8f9fa;
+        }
+
+        /* Überlagerndes Div mit absoluter Positionierung */
+        .overlay-loading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading-indicator {
+
+            animation: loading 1s linear infinite;
+        }
+
+        /* Überlagerndes Div mit absoluter Positionierung */
+        .overlay-next {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .scale-up {
+            margin: 0;
+        }
+
+        .scale-up:hover {
+            scale: 1.005;
+        }
+
+        @keyframes loading {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+
+
+
+
+
+
+        @media screen and (min-height: 1080px) {
+            .video-player {
+                width: 100%;
+                z-index: -1;
+            }
+
+            .video-container {
+                display: flex;
+                background-color: #000000;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .video-res {
+                width: 100%;
+                max-width: 1900px;
+            }
+
+            /* Überlagerndes Div mit absoluter Positionierung */
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                /* Du kannst hier auch weitere Stile wie z.B. Schriftarten, Farben, etc. hinzufügen */
+            }
+
+            .overlay:hover {
+                opacity: 1;
+                background-image: linear-gradient(to bottom, #000000 0%, #00000000 35%);
+                background-image: linear-gradient(to top, #000000 0%, #00000000 35%);
+            }
+
+            .hover-light {
+                margin: 0;
+            }
+
+            .hover-light:hover {
+                color: #f8f9fa;
+            }
+
+            /* Überlagerndes Div mit absoluter Positionierung */
+            .overlay-loading {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .loading-indicator {
+
+                animation: loading 1s linear infinite;
+            }
+        }
+    </style>
+</head>
+
+<body class="overflow-hidden">
+
+    <div id="player-parnet">
+        <div class="video-container">
+            <div class="video-res">
+                <div>
+                    <video autoplay class="video-player" contextmenu="nodownload" id="streamElement">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="overlay-loading" id="loading-element">
+            <div class="loading-container">
+                <div class="loading-indicator">
+                    <img src="./player/symbols/vodify.loader.000003.png" width="60" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="offcanvas w-100 offcanvas-end bg-black bg-opacity-75" data-bs-scroll="true" data-bs-backdrop="false"
+            tabindex="-1" id="videoSettings">
+            <div class="offcanvas-header">
+                <h1 class="offcanvas-title">Einstellungen</h1>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="row">
+                    <div class="col me-4">
+                        <div>
+                            <h3>Sprache</h3>
+                        </div>
+                        <select onchange="changeLanguage()" class="form-select" id="language-select">
+                        </select>
+                    </div>
+                    <div class="col">
+                        <div>
+                            <h3>Untertitel</h3>
+                        </div>
+                        <select class="form-select" id="subtitle-select">
+                            <option value="none" selected>Aus</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="overlay" id="overlay">
+
+            <div class="ms-2 mt-2 me-2">
+                <a href="/vodify/browse/index.html" class="btn d-flex align-items-center text-secondary float-start">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                            class="bi bi-chevron-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                        </svg>
+                    </div>
+                    <div class="text-start hover-light">
+                        <h3> <span id="movie-title"></span></h3>
+                        <h6 id="video-info"></h6>
+                    </div>
+
+
+
+                </a>
+
+                <button class="btn float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#videoSettings">
+                    <img src="./player/symbols/subtitles.svg" alt="">
+                </button>
+            </div>
+
+            <div class="fixed-bottom">
+                <div class="clearfix">
+                    <div class="float-start">
+                        <div class=" mb-2">
+
+                            <button id="previous_episode" class="btn"><img src="./player/symbols/skip_previous.svg"
+                                    alt=""></button>
+
+                            <button id="previous_10" class="btn"><img src="./player/symbols/replay_10.svg"
+                                    alt=""></button>
+
+                            <button class="btn" id="playPauseButton"><img src="./player/symbols/pause.svg"
+                                    alt=""></button>
+
+                            <button id="next_10" class="btn"><img src="./player/symbols/forward_10.svg" alt=""></button>
+
+                            <button id="next_episode" class="btn"><img src="./player/symbols/skip_next.svg"
+                                    alt=""></button>
+                        </div>
+                    </div>
+                    <div class="float-end">
+                        <div class=" mb-2">
+                            <button id="volumeChanger" class="btn"><img src="./player/symbols/volume_up.svg"
+                                    alt=""></button>
+
+                            <button id="fullscreenToggler" class="btn"><img src="./player/symbols/fullscreen.svg"
+                                    alt=""></button>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="ms-3 me-3 mb-5">
+                    <div class="progress scale-up" id="timeline-container" style="height: 5px;">
+                        <div class="progress-bar bg-danger" id="timeline"></div>
+
+                    </div>
+                    <div class="float-end">
+                        <h6><span id="restTime">00:00</span></h6>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Offcanvas Sidebar -->
+
+        <div class="overlay-loading d-none" id="error">
+            <!-- The Modal -->
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="card">
+                    <div class="card-header">Ein Fehler ist aufgetreten</div>
+                    <div class="card-body">
+                        <ul>
+                            <li>Bitte Überprüfe deine Internetverbindung und versuche es erneut</li>
+                            <li>Du hast versucht etwas an zufragen was nicht existiert</li>
+                        </ul>
+
+                    </div>
+                    <div class="card-footer">
+                        <a href="/vodify/browse/index.html" class="btn btn-primary w-100">Zurück zur Startseite</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

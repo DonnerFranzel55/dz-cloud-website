@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="de" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Deatil Site</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" href="./../assets/css/companys.css">
+    <script src="/assets/js/auth.js"></script>
+    <script src="./../assets/js/loadquery.js"></script>
+    <script src="http://192.168.178.27:5501/pck/bootstrap/v5.3.1/js/bootstrap.js"></script>
+    <script src="http://192.168.178.27:5501/pck/bootstrap/v5.3.1/js/bootstrap.bundle.js"></script>
+    <script src="http://192.168.178.27:5501/pck/bootstrap/v5.3.1/js/bootstrap.min.js"></script>
+    <script src="http://192.168.178.27:5501/pck/bootstrap/v5.3.1/js/bootstrap.bundle.min.js"></script>
+    <script>
+        fetchJson()
+    </script>
+</head>
+
+<body class="user-select-none overflow-x-hidden">
+    <header class="d-flex align-items-center bg-dark justify-content-between sticky-top shadow">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-sm float-start">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--bs-white)"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Navbar brand -->
+                    <a class="navbar-brand mt-2 mt-lg-0" href="/vodify/browse/">
+                        <img src="http://192.168.178.27:5501/img/pictures/logo/dz_logo.png" height="50"
+                            alt="DZ Cloud Logo" loading="lazy" />
+                        Vodify
+                    </a>
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                href="/vodify/browse/">Startseite</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/vodify/browse/">Alles</a></li>
+                                <li><a class="dropdown-item" href="/vodify/browse/series/series.html">Serien</a></li>
+                                <li><a class="dropdown-item" href="/vodify/browse/movies/movies.html">Filme</a></li>
+                                <li><a class="dropdown-item" href="#">Sport</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/vodify/search/">Suchen</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Shop</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Alles</a></li>
+                                <li><a class="dropdown-item" href="#">Kaufen und Leihen</a></li>
+                                <li><a class="dropdown-item" href="#">Channels</a></li>
+                                <li><a class="dropdown-item" href="#">Angebote</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Live-TV</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Kostenlos mit
+                                Werbung</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Alles</a></li>
+                                <li><a class="dropdown-item" href="#">Serien</a></li>
+                                <li><a class="dropdown-item" href="#">Filme</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Kategorien</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Sci-Fi</a></li>
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Adventure</a></li>
+                                <li><a class="dropdown-item" href="#">Drama</a></li>
+                                <li><a class="dropdown-item" href="#">Kids</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Mein Bereich</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Einstellungen</a></li>
+                                <li><a class="dropdown-item" href="#">Gekauft oder Geliehen</a></li>
+                                <li><a class="dropdown-item" href="#">Verlauf</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                    <!-- Left links -->
+                </div>
+                <!-- Collapsible wrapper -->
+
+            </div>
+            <!-- Container wrapper -->
+
+
+        </nav>
+        <!-- Navbar -->
+
+        <div class="">
+            <div class="d-flex">
+                <div class="p-2 flex-fill">
+                    <div class="dropdown">
+                        <button type="button" class="btn" data-bs-toggle="dropdown">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-grid" viewBox="0 0 16 16">
+                                <path
+                                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu container shadow-lg rounded-5 p-2" style="background-color: #282a2c; width: max-content;">
+                            <ul id="appList" class="p-3 rounded-5" style="background-color: #1b1b1b; overflow-y: auto;">
+                                
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="p-2 flex-fill">
+                    <div class="dropdown">
+                        <button type="button" class="btn" data-bs-toggle="dropdown">
+                            <img id="user-profile-picture-header" src="/assets/img/icons/account.svg"
+                                class="rounded-circle" width="24" alt="">
+                        </button>
+                        <div class="dropdown-menu shadow-lg rounded-5 p-2" style="background-color: #282a2c;">
+                            <ul class="p-2 rounded-5" style="background-color: #1b1b1b; overflow-y: auto;">
+                                <table class="w-100 table-borderless">
+                                    <tbody>
+                                        <tr class="rounded-5 d-flex">
+                                            <td class="rounded-4 flex-fill">
+                                                <div class="d-flex flex-column align-items-center">
+                                                    <div class="d-flex w-100">
+                                                        <div class="p-2 mt-2">
+                                                            <img id="user-profile-picture-accounts"
+                                                                src="/assets/img/icons/account.svg"
+                                                                class="rounded-circle" width="42" alt="">
+                                                        </div>
+                                                        <div class="p-2 flex-grow-1">
+                                                            <div class="d-flex flex-column w-100">
+                                                                <div class="p-2">
+                                                                    <h3 id="user-profile-name-accounts">Guest</h3>
+                                                                    <p id="user-profile-email-accounts">No email</p>
+                                                                </div>
+                                                                <div class="p-2">
+                                                                    <a id="user-account-access-btn"
+                                                                        href="/auth/login/login.html"
+                                                                        class="btn border">Anmelden</a>
+                                                                    <a id="user-logout-btn" class="btn border d-none"
+                                                                        href="">
+                                                                        <img src="/assets/img/icons/logout.svg"
+                                                                            width="23" alt="">
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <hr>
+                                <table class=" table-borderless">
+                                    <tbody>
+
+                                        <tr class="rounded-5 d-flex">
+                                            <td class="rounded-4 flex-fill app-hover-effect">
+                                                <div class="d-flex w-100 align-items-center">
+                                                    <div class="p-2 ">
+                                                        <img src="/assets/img/icons/add_user.svg" alt="">
+                                                    </div>
+                                                    <div class="p-2 mt-2 flex-grow-1">
+                                                        <h5>Neues Konto hinzufügen</h5>
+                                                    </div>
+                                                </div>
+                        </div>
+                        </td>
+
+                        </tr>
+                        </tbody>
+                        </table>
+                        </ul>
+                        <div class="p-2 d-flex">
+                            <button class="btn border">Datenschutzerklärung</button>
+                            <button class="btn border">Nutzunsbedingungen</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </header>
+
+    <div class="p-xl-5 row col-12">
+        <div class="p-4 p-end-0 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-5 col-xxl-5">
+            <div>
+                <h1><strong id="movie-name"></strong></h1>
+                <h4 id="movie-info"></h4>
+            </div>
+            <div class="d-flex align-items-center mt-4">
+                <h5><span title="Rateing" id="movie-rateing"></span></h5>
+                <h5 class="ms-2 me-2">&middot;</h5>
+                <h5><span id="movie-platform"></span></h5>
+                <h5 class="ms-2 me-2">&middot;</h5>
+                <h5><span id="movie-age"></span></h5>
+                <h5 class="ms-2 me-2">&middot;</h5>
+                <h5><span id="movie-length"></span></h5>
+                <h5 class="ms-2 me-2">&middot;</h5>
+                <h5><span id="movie-publish-year"></span></h5>
+                <h5 class="ms-2 me-2" id="xray-dot">&middot;</h5>
+                <h5><span id="movie-xray" class="badge bg-gray">X-Ray</span></h5>
+                <h5 class="ms-2 me-2" id="hdr-dot">&middot;</h5>
+                <h5><span id="movie-hdr" class="badge bg-gray">HDR</span></h5>
+                <h5 class="ms-2 me-2" id="uhd-dot">&middot;</h5>
+                <h5><span id="movie-uhd" class="badge bg-gray">UHD</span></h5>
+                <h5 class="ms-2 me-2" id="subtitle-dot">&middot;</h5>
+                <h5><span title="Subtitles" id="movie-has-subtitle" class="badge bg-gray"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-badge-cc" viewBox="0 0 16 16">
+                            <path
+                                d="M3.708 7.755c0-1.111.488-1.753 1.319-1.753.681 0 1.138.47 1.186 1.107H7.36V7c-.052-1.186-1.024-2-2.342-2C3.414 5 2.5 6.05 2.5 7.751v.747c0 1.7.905 2.73 2.518 2.73 1.314 0 2.285-.792 2.342-1.939v-.114H6.213c-.048.615-.496 1.05-1.186 1.05-.84 0-1.319-.62-1.319-1.727v-.743zm6.14 0c0-1.111.488-1.753 1.318-1.753.682 0 1.139.47 1.187 1.107H13.5V7c-.053-1.186-1.024-2-2.342-2C9.554 5 8.64 6.05 8.64 7.751v.747c0 1.7.905 2.73 2.518 2.73 1.314 0 2.285-.792 2.342-1.939v-.114h-1.147c-.048.615-.497 1.05-1.187 1.05-.839 0-1.318-.62-1.318-1.727v-.743z" />
+                            <path
+                                d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z" />
+                        </svg></span></h5>
+
+            </div>
+
+            <div class="row row-cols-4 row-cols-lg-8 align-items-center mt-3" id="categories-container">
+            </div>
+
+            <div class="mt-3">
+                <div class="row row-cols-3 align-items-center">
+                    <div class="col-12 col-lg-3 col-xl-4 col-xxl-3 mb-2">
+                        <button id="movie-play-movie"
+                            class="btn btn-light w-100 rounded-5 d-flex align-items-center justify-content-center"
+                            style="font-size: x-large;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
+                            </svg> Ansehen
+                        </button>
+                    </div>
+                    <div class="col-12 col-lg-2 col-xl-4 col-xxl-2 mb-2 mb-lg-0">
+                        <div class="col-12">
+                            <button id="movie-buy"
+                                class=" btn-dark p-4 p-xl-2 w-100 btn rounded-4 d-flex align-items-center text-start">
+                                Weitere <br class="d-none d-lg-block">
+                                Kaufoptionen
+                            </button>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class="col-12 col-lg-6 col-xl-4 col-xxl-6">
+                        <div class="row w-100 row-cols-5 ms-0 me-0 ms-lg-0 me-lg-0">
+                            <div class="col">
+                                <button id="movie-play-trailer"
+                                    class="btn btn-dark rounded-4 d-flex align-items-center"
+                                    style="font-size: x-large;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                        class="bi bi-film" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0v6h8V1H4zm8 8H4v6h8V9zM1 1v2h2V1H1zm2 3H1v2h2V4zM1 7v2h2V7H1zm2 3H1v2h2v-2zm-2 3v2h2v-2H1zM15 1h-2v2h2V1zm-2 3v2h2V4h-2zm2 3h-2v2h2V7zm-2 3v2h2v-2h-2zm2 3h-2v2h2v-2z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="col">
+                                <button id="movie-add-list"
+                                    class="btn btn-dark rounded-4 d-flex align-items-center"
+                                    style="font-size: x-large;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" fill="currentColor"
+                                        class="bi bi-plus" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="col">
+                                <button id="movie-download-to-device"
+                                    class="btn btn-dark rounded-4 d-flex align-items-center"
+                                    style="font-size: x-large;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" fill="currentColor"
+                                        class="bi bi-download" viewBox="0 0 16 16">
+                                        <path
+                                            d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                                        <path
+                                            d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="col">
+                                <button id="movie-watch-party"
+                                    class="btn btn-dark rounded-4 d-flex align-items-center"
+                                    style="font-size: x-large;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" fill="currentColor"
+                                        class="bi bi-people-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="col">
+                                <button id="movie-share" class="btn btn-dark rounded-4 d-flex align-items-center"
+                                    style="font-size: x-large;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" fill="currentColor"
+                                        class="bi bi-share-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.499 2.499 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5z" />
+                                    </svg>
+                                </button>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+        <div class="d-flex col-xl-6 justify-content-end align-items-center d-none d-xl-flex">
+            <img class="rounded-5" id="movie-image" width="720" src="" alt="">
+        </div>
+    </div>
+    <div class="p-5">
+        <!-- Nav pills -->
+        <ul class="nav nav-pills d-flex justify-content-center">
+            <li id="movie-episode-section" class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#episodes">Folgen</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="pill" href="#similar">Änliche Titel</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#details">Details</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane" id="episodes">
+                <h3><span id="episode-counter">Keine</span> Episoden</h3>
+                <div class="d-flex flex-column" id="episode-container">
+
+
+                </div>
+            </div>
+            <div class="tab-pane active" id="similar">
+                <h3>Keine ähnlichen Titel verfügbar</h3>
+
+            </div>
+            <div class="tab-pane fade" id="details">
+                <div class="d-flex">
+                    <div class="w-75">
+                        <h3><strong>Weitere Informationen</strong></h3>
+                        <div class="mt-5">
+                            <h4><strong>Hinweis zum Inhalt</strong></h4>
+                            <div class="d-flex" id="movie-in-content">
+
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <h4><strong>Wiedergabesprachen</strong></h4>
+                            <div class="d-flex" id="movie-languages">
+
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <h4><strong>Untertitelsprachen</strong></h4>
+                            <div class="d-flex" id="movie-subtitles">
+
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <h4><strong>Regie</strong></h4>
+                            <div class="d-flex" id="movie-regie">
+
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <h4><strong>Produzenten</strong></h4>
+                            <div class="d-flex" id="movie-producers">
+
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <h4><strong>Hauptdarsteller</strong></h4>
+                            <div class="d-flex" id="movie-main-actor">
+
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <h4><strong>Studio</strong></h4>
+                            <div class="d-flex" id="movie-studios">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-dark shadow-lg p-2 w-25 rounded-4 justify-content-center text-center d-none d-lg-block">
+                        <h4><span>Bewertungen</span></h5>
+                            <div class="w-100 d-flex align-items-center justify-content-center">
+                                <h1><strong><span id="movie-rateing-detail"></span></strong></h1>
+                            </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html id="html" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title id="site-title">RecRunner</title>
+    <link rel="stylesheet" href="http://192.168.178.27:5501/css/bootstrap.css">
+    <link rel="stylesheet" href="./assets/css/game.css">
+    <script src="http://192.168.178.27:5501/js/bootstrap.js"></script>
+</head>
+
+<body class="overflow-hidden">
+
+    <div id="purchaseModalContainer-905542">
+
+    </div>
+
+    <div class="game-payment-confirm d-none d-flex justify-content-center align-items-center flex-column ms-2 me-2"
+        style="height: 100vh;">
+        <div class="bg-dark rounded-4 p-lg-5 p-2 text-white w-100">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="shadow-lg p-2">
+                            <h2 class="text-capitalize" id="item-name">ITEM</h2>
+                            <p id="game-name">GAME</p>
+                        </div>
+                        <!--Card-->
+                        <div class="mt-3">
+                            <div class="bg-dark shadow-lg border p-2 rounded">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div class="row align-items-center">
+                                                <div class="col-sm-4 col-3">
+                                                    <img id="card-img"
+                                                        src="http://192.168.178.27:5501/img/payment/visa.png" width="40"
+                                                        class="bg-white rounded" alt="">
+                                                </div>
+                                                <div class="col">
+                                                    <h3 class="d-flex align-items-center ms-lg-0"><span
+                                                            id="card-company">Visa</span> <span
+                                                            class="ms-4 fs-6">7281</span></h3>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+                                        <div class="col"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container-fluid mt-5 p-0">
+                            <div class="row mb-2">
+                                <div class="col">
+                                    <h3 id="item-price"></h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3">
+                                    <button id="buy-offer-btn-62918" class="btn btn-success p-3 w-100"><span
+                                            class="fs-5" id="buy-confirm-btn-text">Buy</span></button>
+                                </div>
+                                <div class="col-4">
+                                    <button onclick="cancel()" class="btn btn-secondary p-3 w-100"><span class="fs-5"
+                                            id="cancel-confirm-btn-text">Cancel</span></button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col d-none d-lg-block">
+                        <img src="./assets/img/gem.png" style="width: 49%;"
+                            class="img-pixeled img-fluid bg-white p-1" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="game-credits bg-black" style="display: none;">
+        <div class="d-flex credits justify-content-center align-items-center flex-column text-warning text-center"
+            style="height: 100vh;">
+            <div class="mb-5" style="margin-bottom: 10%;">
+                <h1 id="game-credit-name" style="font-size: 100px;">REC RUNNER</h1>
+            </div>
+            <div>
+                <h2>Credits</h2>
+            </div>
+            <div class="mt-3">
+                <h4 id="credit-idea-title">Idea</h4>
+                <h4>Dario (Rec017)</h4>
+            </div>
+            <div class="mt-5">
+                <h4 id="credit-software-developer-title">Software Developer</h4>
+                <h4>Devin (DonnerFranzel55)</h4>
+            </div>
+            <div class="mt-3">
+                <h4 id="credit-audio-title">Audio</h4>
+                <h4>Devin (DonnerFranzel55)</h4>
+            </div>
+            <div class="mt-3">
+                <h4 id="credit-graphic-title">Graphic design</h4>
+                <h4>Dario (Rec017)</h4>
+            </div>
+            <div class="mt-3">
+                <h4 id="credit-style-title">Styleing</h4>
+                <h4>Devin (DonnerFranzel55)</h4>
+            </div>
+            <div class="mt-3">
+                <h4 id="credit-scripting-title">Scripting</h4>
+                <h4>Devin (DonnerFranzel55)</h4>
+            </div>
+            <div class="mt-5">
+                <h4>Rec RUNNER</h4>
+                <h4>v0.5.4</h4>
+            </div>
+            <div class="mb-5" style="margin-bottom: 10%; margin-top: 10%;">
+                <h1 style="font-size: 100px;">SNAKE</h1>
+            </div>
+            <div>
+                <h2>Credits</h2>
+            </div>
+            <div class="mt-3">
+                <h4 id="credit-snake-idea-title">Idea</h4>
+                <h4>Dario (Rec017)</h4>
+            </div>
+            <div class="mt-5">
+                <h4 id="credit-snake-software-developer-title">Software Developer</h4>
+                <h4>Dario (Rec017)</h4>
+            </div>
+            <div class="mt-5">
+                <h4 id="credit-snake-co-software-developer-title">Co-Software Developer</h4>
+                <h4>Devin (DonnerFranzel55)</h4>
+                <h4>Denis (Adicon)</h4>
+            </div>
+            <div class="mt-3">
+                <h4 id="credit-snake-graphic-title">Graphic design</h4>
+                <h4>Dario (Rec017)</h4>
+            </div>
+            <div class="mt-3">
+                <h4 id="credit-snake-style-title">Styleing</h4>
+                <h4>Dario (Rec017)</h4>
+            </div>
+            <div class="mt-3">
+                <h4 id="credit-snake-scripting-title">Scripting</h4>
+                <h4>Dario (Rec017)</h4>
+                <h4>Devin (DonnerFranzel55)</h4>
+            </div>
+            <div class="mt-5">
+                <h4>SNAKE</h4>
+                <h4>v0.7</h4>
+            </div>
+
+        </div>
+    </div>
+    <div class="game-settings bg-black bg-opacity-25" style="display: none;height: 100vh;">
+        <div class="d-flex flex-column p-2 container-fluid">
+            <div class="d-flex">
+                <button onclick="hide(3)" class="btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg" width="32"
+                        height="32" fill="#ffffff" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                    </svg></button>
+                <h1 class="ms-3" id="settings-text">SETTINGS</h1>
+                <button onclick="hide(5)" class="ms-2 d-block d-md-none btn btn-info settings-control-btn"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-back"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M0 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2h2a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2z" />
+                    </svg></button>
+            </div>
+            <div class="container-fluid mt-3">
+                <div class="row">
+                    <!-- Nav pills -->
+                    <ul class="nav nav-pills flex-column col-12 col-md-4 col-lg-2 bg-dark rounded p-2 settings-control">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="pill" href="#general"
+                                id="general-nav-text">GENERAL</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="pill" href="#profile" id="profile-nav-text">PROFILE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="pill" href="#about" id="about-nav-text">ABOUT</a>
+                        </li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content col">
+                        <div class="tab-pane container active overflow-auto" id="general">
+                            <h1 id="general-text">GENERAL</h1>
+                            <div class="mt-3 bg-dark shadow-lg rounded p-4 text-white">
+                                <h3><span id="signed-in-profile-text">Signed in Profile</span>: <span class="fw-bolder"
+                                        id="signed-in-profile-name">Guest</span></h3>
+                            </div>
+                            <div class="mt-3 bg-dark shadow-lg rounded p-4 text-white">
+                                <h3> <img src="./assets/img/translate.svg" alt=""><span
+                                        id="language-text">LANGUAGE</span></h3>
+                                <select name="lang" onchange="selectLang()" id="user-selected-lang" class="form-select">
+                                    <option value="en">Global Language</option>
+                                    <option value="en">English</option>
+                                    <option value="de">Deutsch</option>
+                                    <option value="jp">日本語</option>
+                                    <option value="no">Norsk</option>
+                                    <option value="fr">Français</option>
+                                    <option value="zh_TW">傳統(中國)</option>
+                                    <option value="ru">Русский</option>
+                                    <option value="ar">عربي</option>
+                                    <option value="la">Latine</option>
+                                    <option value="hi">हिंदी</option>
+                                    <option value="es">Español</option>
+                                    <option value="nl">Nederlands</option>
+                                    <option value="pl">Polski</option>
+                                    <option value="fi">Suomalainen</option>
+                                    <option value="da">Dansk</option>
+                                    <option value="uk">Український</option>
+                                    <option value="it">Italiano</option>
+                                    <option value="zu">IsiZulu</option>
+                                    <option value="be">Беларускі</option>
+                                    <option value="el">Ελληνικά</option>
+                                    <option value="he">עִברִית</option>
+                                    <option value="jv">Jawa</option>
+                                    <option value="cs">čeština</option>
+                                    <option value="hr">Hrvatski</option>
+                                    <option value="zh">简体(中文)</option>
+                                    <option value="sv">Svenska</option>
+                                    <option value="lo">ພາສາລາວ</option>
+                                    <option value="tr">Türkçe</option>
+                                    <option value="ko">한국인</option>
+                                    <option value="pt">Português</option>
+                                    <option value="ms">Bahasa Melayu</option>
+                                    <option value="id">Bahasa Indonesia</option>
+                                    <option value="su">Suomi</option>
+                                    <option value="vi">Tiếng Việt</option>
+                                    <option value="af">Afrikaans</option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                    <optgroup label="Additional Languages">
+                                        <option value="pirate">Pirates Speech</option>
+                                        <option value="viking">Vikings Language</option>
+                                        <option value="egyptian">Egypt History</option>
+                                        <option value="teen">Teen Time</option>
+                                    </optgroup>
+
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="tab-pane container fade overflow-auto" id="profile">
+                            <h1 id="profile-text">Profile</h1>
+                            <div class="container-fluid rounded-4 bg-dark p-2 ">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div
+                                            class="d-flex text-white justify-content-center align-items-center text-center flex-column">
+                                            <img src="/dariosGame/assets/img/account_circle.svg" width="120" alt="">
+                                            <form onsubmit="changeUsername(); return false">
+                                                <input id="username-text" type="text" maxlength="12" minlength="3"
+                                                    class="form-control bg-dark text-center text-white fs-1 border-0">
+
+                                            </form>
+                                            <div class="container-fluid mt-4 mb-4">
+                                                <div class="row">
+                                                    <div class="col rounded-3 shadow-lg p-4">
+                                                        <h3 id="best-score-text">Best Score</h3>
+                                                        <h4 id="best-score-number">0</h4>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="col rounded-3 shadow-lg p-4">
+                                                            <h3 id="current-score-text">Current Score</h3>
+                                                            <h4 id="current-score-number">0</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container-fluid mt-4 mb-4">
+                                                <div class="row">
+                                                    <div class="col rounded-3 shadow-lg p-4">
+                                                        <h3 id="advanced-settings-text">Advanced Settings</h3>
+                                                        <div class="container-fluid">
+                                                            <div class="row">
+                                                                <div class="col">
+                                                                    <button onclick="delProfile()"
+                                                                        class="btn btn-danger w-100"><span class="fs-4"
+                                                                            id="delete-profile-btn-text">Delete
+                                                                            Profile</span></button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane container fade" id="about">
+                            <div class="overflow-auto">
+                                <h1 id="about-text">ABOUT</h1>
+                                <div class="container-fluid">
+                                    <div class="row mb-3">
+                                        <div class="col bg-dark p-3 text-white rounded shadow-lg">
+                                            <h3>Rec Runner</h3>
+                                            <h5><span id="about-version-text">Version</span>: <span>0.2.6</span></h5>
+                                            <h5><span id="about-realease-text">Realease</span>: <span
+                                                    class="badge bg-primary" id="version-about-beta-text">BETA</span>
+                                            </h5>
+                                            <h5><span id="about-buildnumber-text">Buildnumber</span>:
+                                                <span>202308151628427599</span>
+                                            </h5>
+                                            <h5><span id="about-script-text">Script</span>: <span
+                                                    id="script-about-text">JavaScript</span></h5>
+                                            <h5><span id="about-style-text">Style</span>: <span
+                                                    id="styling-about-text">CSS</span></h5>
+                                            <h5><span id="about-framework-text">Framework</span>: <span>Bootstrap
+                                                    v5.3</span></h5>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col bg-dark p-3 text-white rounded shadow-lg">
+                                            <h3 id="external-links-text">External Links</h3>
+                                            <div class="col bg-dark p-3 text-white rounded shadow-lg">
+                                                <h3>GitHub</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col bg-dark p-3 text-white rounded shadow-lg">
+                                            <h3 id="more-games-text">More Games</h3>
+                                            <div class="col bg-dark p-3 text-white rounded shadow-lg">
+                                                <a class="fs-3" href="/dariosGame/snake/">Snake (Keyboard needed)</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="game-shop bg-primary" style="display: none;">
+        <div class="d-flex flex-column text-white text-center" style="height: 100vh;">
+            <div class="fixed-top bg-danger shadow-lg p-2">
+                <button onclick="hide(1)" class="float-start btn btn-danger"><svg xmlns="http://www.w3.org/2000/svg"
+                        width="32" height="32" fill="#ffffff" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                    </svg></button>
+                <h1 id="shop-text">SHOP</h1>
+            </div>
+            <div class="mt-5" style="height: 100vh;">
+                <div id="shop-container" class="d-flex flex-nowrap overflow-auto mb-5 p-5">
+
+                </div>
+            </div>
+            <div class="fixed-bottom bg-danger shadow-lg p-2">
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div id="skin-section-72610" onclick="loadShopData(2790)"
+                            class="col active me-2 rounded-4 curser-pointer">
+                            <h1 id="skins-text">SKINS</h1>
+                        </div>
+                        <div id="daily-section-29472" onclick="loadShopData(2791)"
+                            class="col me-2 rounded-4 curser-pointer">
+                            <h1 id="daily-text">DAILY</h1>
+                        </div>
+                        <div id="gams-section-00125" onclick="loadShopData(2792)"
+                            class="col me-2 rounded-4 curser-pointer">
+                            <h1 id="gems-text">GEMS</h1>
+                        </div>
+                        <div id="special-section-91023" onclick="loadShopData(2793)"
+                            class="col rounded-4 curser-pointer">
+                            <h1 id="special-text">SPEZIAL</h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center align-items-center flex-column" style="height: 100vh;">
+        <div class="bg-dark rounded-4 p-5 text-center text-white game-controls">
+            <div class="mb-4 p-4">
+                <h1 id="game-main-name-text">REC RUNNER</h1>
+            </div>
+            <div class="mb-3">
+                <button onclick="show(0)"
+                    class="btn btn-success rounded-5 w-100 d-flex align-items-center justify-content-center"><span
+                        class="fs-2" id="play-button-72819">PLAY</span></button>
+            </div>
+            <div class="mt-2">
+                <button onclick="show(1)"
+                    class="btn btn-warning rounded-5 d-none w-100 d-flex align-items-center justify-content-center mb-3"><span
+                        class="fs-5" id="shop-btn-text">SHOP</span></button>
+                <button onclick="show(2)"
+                    class="btn btn-secondary  rounded-5 w-100 d-flex align-items-center justify-content-center mb-3"><span
+                        class="fs-5" id="credit-btn-text">CREDITS</span></button>
+            </div>
+            <div class="mt-2 d-flex">
+                <button onclick="show(3)"
+                    class="btn btn-secondary  rounded-5 w-100 d-flex align-items-center justify-content-center "><span
+                        class="fs-5" id="settings-btn-text">SETTINGS</span></button>
+                <a href="/gaming/"
+                    class="btn btn-danger  rounded-5 w-100 d-flex align-items-center justify-content-center ms-2"><span
+                        class="fs-5" id="exit-btn-text">EXIT</span></a>
+            </div>
+            <div class="mt-5">
+                <h5>v0.5.4 <span class="badge bg-primary">BETA</span></h5>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="./assets/js/title.js"></script>
+</body>
+
+</html>

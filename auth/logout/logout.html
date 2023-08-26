@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abmelden - DZ Account</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <script src="http://192.168.178.27:5501/pck/bootstrap/v5.3.1/js/bootstrap.js"></script>
+    <script src="http://192.168.178.27:5501/pck/bootstrap/v5.3.1/js/bootstrap.bundle.js"></script>
+    <script src="http://192.168.178.27:5501/pck/bootstrap/v5.3.1/js/bootstrap.min.js"></script>
+    <script src="http://192.168.178.27:5501/pck/bootstrap/v5.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="http://192.168.178.27:5501/js/bootstrap.esm.js"></script>
+    <script>
+        window.onload = function logout() {
+            fetch('/assets/data/users.json')
+                .then(res => res.json())
+                .then(data => {
+                    if (Array.isArray(data.users)) {
+                        data.users.forEach(user => {
+                            if (localStorage.getItem("localUPST") === user.secret_token
+                                || sessionStorage.getItem("localUPST") === user.secret_token) {
+                                const profile = user.profile;
+
+                                const email = profile.email;
+                                const path = profile.path;
+                                const name = profile.name;
+                                const surname = profile.surname;
+                                const pathlocal = localStorage.getItem("lsppfu")
+
+
+                                sessionStorage.clear()
+                                localStorage.clear()
+
+                                let img = document.getElementById('user-logout-img')
+                                let nameElement = document.getElementById('user-logout-name')
+                                let emailElement = document.getElementById('user-logout-email')
+
+
+                                nameElement.textContent = name + " " + surname;
+                                emailElement.textContent = email;
+                                if (pathlocal === null) {
+                                    img.src = path;
+                                    localStorage.setItem("lsppfu", path)
+
+                                } else {
+                                    img.src = pathlocal;
+                                }
+                                setTimeout(() => {
+                                    location.href = "/"
+                                }, 1200);
+
+
+
+
+                            }
+                        });
+                    } else {
+                        console.error("Invalid Data. Data is not an Array!");
+                    }
+                })
+                .catch(err => {
+                    console.error(err);
+                });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h1 class="card-title">Logging out</h1>
+                        <div class="p-2">
+                            <div>
+                                <img id="user-logout-img" width="64" class="rounded-circle"
+                                    src="/assets/img/icons/account.svg" alt="">
+                            </div>
+                            <div class="mt-3">
+                                <h3 id="user-logout-name"></h3>
+                                <p id="user-logout-email"></p>
+                            </div>
+                            <div class="mt-4">
+                                <div class="spinner-border text-danger"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

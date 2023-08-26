@@ -1,0 +1,70 @@
+{
+    "instances":{
+        "skins":[
+            {
+                "id": "738367349234672349202362398634",
+                "name": "Dave",
+                "path": "/dariosGame/assets/img/player/dave.png",
+                "price": 0,
+                "currency": "Coins",
+                "rareity": "common",
+                "visible": true,
+                "type": "skin",
+                "default": true
+
+            },
+            {
+                "id": "762137489981234762134123647623",
+                "name": "Sabine",
+                "path": "/dariosGame/assets/img/player/sabine.png",
+                "price": 5000,
+                "currency": "Coins",
+                "rareity": "common",
+                "visible": true,
+                "type": "skin",
+                "default": false
+
+            }
+        ],
+        "daily":[
+            {
+                "id": "738367349234672349202362398634",
+                "name": "Dave",
+                "path": "/dariosGame/assets/img/player/dave.png",
+                "price": 0,
+                "currency": "Coins",
+                "rareity": "common",
+                "type": "skin",
+                "visible": true,
+                "default": true
+
+            },
+            {
+                "id": "762137489981234762134123647623",
+                "name": "Sabine",
+                "path": "/dariosGame/assets/img/player/sabine.png",
+                "price": 5000,
+                "currency": "Coins",
+                "rareity": "common",
+                "type": "skin",
+                "visible": true,
+                "default": false
+
+            }
+        ],
+        "gems":[
+            {
+                "id": "964112434376742796249642962542",
+                "name": "250",
+                "path": "/dariosGame/assets/img/gem.png",
+                "price": 1.99,
+                "currency": "€",
+                "rareity": "epic",
+                "type": "gems",
+                "visible": true,
+                "default": false
+
+            }
+        ]
+    }
+}

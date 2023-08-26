@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="de" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="title">Continue...</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <script src="/assets/js/account.js"></script>
+    <script src="http://192.168.178.27:5501/pck/bootstrap/v5.3.1/js/bootstrap.js"></script>
+    <script src="http://192.168.178.27:5501/pck/bootstrap/v5.3.1/js/bootstrap.bundle.js"></script>
+    <script src="http://192.168.178.27:5501/pck/bootstrap/v5.3.1/js/bootstrap.min.js"></script>
+    <script src="http://192.168.178.27:5501/pck/bootstrap/v5.3.1/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body id="body">
+    <header class="d-flex align-items-center justify-content-between">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-sm float-start">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--bs-white)"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Navbar brand -->
+                    <div class="navbar-brand mt-2 mt-lg-0" href="#">
+                        <img src="http://192.168.178.27:5501/img/pictures/logo/dz_logo.png" height="50"
+                            alt="DZ Cloud Logo" loading="lazy" />
+                        <a class="text-white text-decoration-none" href="">Account</a>
+                    </div>
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href=""></a>
+                        </li>
+
+                    </ul>
+                    <!-- Left links -->
+                </div>
+                <!-- Collapsible wrapper -->
+
+            </div>
+            <!-- Container wrapper -->
+
+
+        </nav>
+        <!-- Navbar -->
+
+        <div class="float-end">
+            <div class="d-flex">
+                <div class="p-2 flex-fill">
+                    <div class="dropdown">
+                        <button type="button" class="btn" data-bs-toggle="dropdown">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-grid" viewBox="0 0 16 16">
+                                <path
+                                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu container shadow-lg rounded-5 p-2" style="background-color: #282a2c; width: max-content;">
+                            <ul id="appList" class="p-3 rounded-5" style="background-color: #1b1b1b; overflow-y: auto;">
+                                <!-- <table class=" table-borderless">
+                                    <tbody>
+                                        <tr class="rounded-5 d-flex">
+
+                                            <td class="rounded-4 flex-fill app-hover-effect" style="width: 110px;">
+                                                <a id="user-account-btn" href="/auth/login/login.html">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="p-2">
+                                                            <img id="user-profile-picture-apps" width="42"
+                                                                class="rounded-circle"
+                                                                src="/assets/img/icons/account.svg" alt="">
+                                                        </div>
+                                                        <div class="p-2">Konto</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+
+                                            <td class="rounded-4 flex-fill app-hover-effect" style="width: 110px;">
+                                                <a href="">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="p-2">
+                                                            <img src="/assets/img/icons/dz/dz_search.svg" alt="">
+                                                        </div>
+                                                        <div class="p-2">Suche</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+
+                                            <td class="rounded-4 flex-fill app-hover-effect" style="width: 110px;">
+                                                <a href="">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="p-2">
+                                                            <img src="/assets/img/icons/dz/dz_maps.svg" alt="">
+                                                        </div>
+                                                        <div class="p-2">Maps</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+
+                                        </tr>
+                                        <tr class="rounded-5 d-flex">
+
+                                            <td class="rounded-4 flex-fill app-hover-effect" style="width: 110px;">
+                                                <a href="">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="p-2">
+                                                            <img src="/assets/img/icons/dz/dz_videoVault.svg" alt="">
+                                                        </div>
+                                                        <div class="p-2">VideoVault</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+
+                                            <td class="rounded-4 flex-fill app-hover-effect" style="width: 110px;">
+                                                <a href="/app_store/app_store.html">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="p-2">
+                                                            <img src="/assets/img/icons/dz/dz_appstore.svg" alt="">
+                                                        </div>
+                                                        <div class="p-2">App Store</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+
+                                            <td class="rounded-4 flex-fill app-hover-effect" style="width: 110px;">
+                                                <a href="">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="p-2">
+                                                            <img src="/assets/img/icons/dz/dz_news.svg" alt="">
+                                                        </div>
+                                                        <div class="p-2">News</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+                                        </tr>
+                                        <tr class="rounded-5 d-flex">
+
+                                            <td class="rounded-4 flex-fill app-hover-effect" style="width: 110px;">
+                                                <a href="">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="p-2">
+                                                            <img src="/assets/img/icons/dz/dz_mail.svg" alt="">
+                                                        </div>
+                                                        <div class="p-2">Mail</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+
+                                            <td class="rounded-4 flex-fill app-hover-effect" style="width: 110px;">
+                                                <a href="">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="p-2">
+                                                            <img src="/assets/img/icons/dz/dz_chat.svg" alt="">
+                                                        </div>
+                                                        <div class="p-2">Chat</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+
+                                            <td class="rounded-4 flex-fill app-hover-effect" style="width: 110px;">
+                                                <a href="">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="p-2">
+                                                            <img src="/assets/img/icons/dz/dz_drive.svg" alt="">
+                                                        </div>
+                                                        <div class="p-2">Drive</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+
+                                        </tr>
+                                        <tr class="rounded-5 d-flex">
+
+                                            <td class="rounded-4 flex-fill app-hover-effect" style="width: 110px;">
+                                                <a href="">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="p-2">
+                                                            <img src="/assets/img/icons/dz/dz_calendar.svg" alt="">
+                                                        </div>
+                                                        <div class="p-2">Kalendar</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+
+                                            <td class="rounded-4 flex-fill app-hover-effect" style="width: 110px;">
+                                                <a href="">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="p-2">
+                                                            <img src="/assets/img/icons/dz/dz_translate.svg" alt="">
+                                                        </div>
+                                                        <div class="p-2">Übersetzer</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+
+                                            <td class="rounded-4 flex-fill app-hover-effect" style="width: 110px;">
+                                                <a href="">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="p-2">
+                                                            <img src="/assets/img/icons/dz/dz_photos.svg" alt="">
+                                                        </div>
+                                                        <div class="p-2">Fotos</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <hr>
+                                <table class=" table-borderless">
+                                    <tbody>
+                                        <tr class="rounded-5 d-flex">
+
+                                            <td class="rounded-4 flex-fill app-hover-effect" style="width: 110px;">
+                                                <a href="">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="p-2">
+                                                            <img src="/assets/img/icons/dz/dz_finance.svg" alt="">
+                                                        </div>
+                                                        <div class="p-2">Finanzen</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+
+                                            <td class="rounded-4 flex-fill app-hover-effect" style="width: 110px;">
+                                                <a href="">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="p-2">
+                                                            <img src="/assets/img/icons/dz/dz_docs.svg" alt="">
+                                                        </div>
+                                                        <div class="p-2">Docs</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+
+                                            <td class="rounded-4 flex-fill app-hover-effect" style="width: 110px;">
+                                                <a href="">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="p-2">
+                                                            <img src="/assets/img/icons/dz/dz_sheet.svg" alt="">
+                                                        </div>
+                                                        <div class="p-2">Tabellen</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+
+                                        </tr>
+                                        <tr class="rounded-5 d-flex">
+
+                                            <td class="rounded-4 flex-fill app-hover-effect" style="width: 110px;">
+                                                <a href="">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="p-2">
+                                                            <img src="/assets/img/icons/dz/dz_slides.svg" alt="">
+                                                        </div>
+                                                        <div class="p-2">Präsentation</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+
+                                            <td class="rounded-4 flex-fill app-hover-effect" style="width: 110px;">
+                                                <a href="/vodify/browse/">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="p-2">
+                                                            <img src="/assets/img/icons/dz/dz_vodify.svg" alt="">
+                                                        </div>
+                                                        <div class="p-2">Vodify</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+
+                                            <td class="rounded-4 flex-fill app-hover-effect" style="width: 110px;">
+                                                <a href="">
+                                                    <div class="d-flex flex-column align-items-center">
+                                                        <div class="p-2">
+                                                            <img src="/assets/img/icons/dz/dz_books.svg" alt="">
+                                                        </div>
+                                                        <div class="p-2">Bücher</div>
+                                                    </div>
+                                                </a>
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table> -->
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="p-2 flex-fill">
+                    <div class="dropdown">
+                        <button type="button" class="btn" data-bs-toggle="dropdown">
+                            <img id="user-profile-picture-header" src="/assets/img/icons/account.svg"
+                                class="rounded-circle" width="24" alt="">
+                        </button>
+                        <div class="dropdown-menu shadow-lg rounded-5 p-2" style="background-color: #282a2c;">
+                            <ul class="p-2 rounded-5" style="background-color: #1b1b1b; overflow-y: auto;">
+                                <table class="w-100 table-borderless">
+                                    <tbody>
+                                        <tr class="rounded-5 d-flex">
+                                            <td class="rounded-4 flex-fill">
+                                                <div class="d-flex flex-column align-items-center">
+                                                    <div class="d-flex w-100">
+                                                        <div class="p-2 mt-2">
+                                                            <img id="user-profile-picture-accounts"
+                                                                src="/assets/img/icons/account.svg"
+                                                                class="rounded-circle" width="42" alt="">
+                                                        </div>
+                                                        <div class="p-2 flex-grow-1">
+                                                            <div class="d-flex flex-column w-100">
+                                                                <div class="p-2">
+                                                                    <h3 id="user-profile-name-accounts">Guest</h3>
+                                                                    <p id="user-profile-email-accounts">No email</p>
+                                                                </div>
+                                                                <div class="p-2">
+                                                                    <a id="user-account-access-btn"
+                                                                        href="/auth/login/login.html"
+                                                                        class="btn border">Anmelden</a>
+                                                                    <a id="user-logout-btn" class="btn border d-none"
+                                                                        href="">
+                                                                        <img src="/assets/img/icons/logout.svg"
+                                                                            width="23" alt="">
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <hr>
+                                <table class=" table-borderless">
+                                    <tbody>
+
+                                        <tr class="rounded-5 d-flex">
+                                            <td class="rounded-4 flex-fill app-hover-effect">
+                                                <div class="d-flex w-100 align-items-center">
+                                                    <div class="p-2 ">
+                                                        <img src="/assets/img/icons/add_user.svg" alt="">
+                                                    </div>
+                                                    <div class="p-2 mt-2 flex-grow-1">
+                                                        <h5>Neues Konto hinzufügen</h5>
+                                                    </div>
+                                                </div>
+                        </div>
+                        </td>
+
+                        </tr>
+                        </tbody>
+                        </table>
+                        </ul>
+                        <div class="p-2 d-flex">
+                            <button class="btn border">Datenschutzerklärung</button>
+                            <button class="btn border">Nutzunsbedingungen</button>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </header>
+
+    <section>
+        <!-- The Modal -->
+        <div class="modal" id="ppcm">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Profilbild auswählen</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="d-flex justify-content-center" id="ppcmlid">
+                            <div class="spinner-border text-muted"></div>
+                            <div class="ms-2 mt-1">
+                                <h5>Lade...</h5>
+                            </div>
+                        </div>
+                        <div class="row" id="ppcmppscd">
+
+                        </div>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" onclick="resetPP()" class="btn btn-link"
+                            data-bs-dismiss="modal">Reset</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Abbrechen</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mt-1 p-5 text-white rounded d-flex justify-content-center">
+            <div class="text-center">
+                <div>
+                    <button onclick="loadPP()" class="btn p-0 rounded-circle" type="button" data-bs-toggle="modal"
+                        data-bs-target="#ppcm">
+                        <img id="account-user-img-header" class="rounded-circle" width="96"
+                            src="/assets/img/icons/account.svg" alt="">
+                    </button>
+
+                </div>
+                <h1 id="account-user-name">Willkommen</h1>
+                <p class="text-secondary" id="account-user-email">E-Mail</p>
+
+            </div>
+        </div>
+    </section>
+    <section>
+
+
+        <ul class="d-md-flex p-2 mt-2 nav nav-pills justify-content-md-center flex-nowrap overflow-auto">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="pill" href="#overview">Übersicht</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#personal">Persönlichkeit</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#security">Sicherheit</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#privacy">Datenschutz</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#profiles">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#cloudStorage">Cloudspeicher</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="pill" href="#pay">Zahlung & Abos</a>
+            </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane container active" id="overview">
+                <h2>Übersicht</h2>
+                <div class="">
+                    <div class="p-2 rounded bg-success">
+                        <div class="row">
+                            <div class="col-12 col-md-1">
+                                <img src="/assets/img/icons/account/gpp_good.svg" id="account-overview-security-gpp"
+                                    width="45" alt="">
+                            </div>
+                            <div class="col">
+                                <h3>Dein Account is geschützt</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="tab-pane container fade" id="personal">
+                <h3>Persönlickeit</h3>
+
+                <div class="border rounded p-2 mb-2">
+                    <h6>Deine Informationen</h6>
+                    <table class="table table-small table-borderless table-striped">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h6>Name</h6>
+                                </td>
+                                <td>
+                                    <h6 id="user-personal-name">No name</h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h6>Geburtstag</h6>
+                                </td>
+                                <td>
+                                    <h6 id="user-personal-birthday">No Birthday</h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h6>Geschlecht</h6>
+                                </td>
+                                <td>
+                                    <h6 id="user-personal-gender">No Gender</h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h6>Pronaouce</h6>
+                                </td>
+                                <td>
+                                    <h6 id="user-personal-pronaouce">No Pronaouce</h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h6>E-Mail</h6>
+                                </td>
+                                <td>
+                                    <h6 id="user-personal-email">No E-Mail</h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h6>Telefon</h6>
+                                </td>
+                                <td>
+                                    <h6 id="user-personal-phone">No Phonenumber</h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h6>Privat</h6>
+                                </td>
+                                <td>
+                                    <h6 id="user-personal-adress">No privat adress</h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h6>Sprache</h6>
+                                </td>
+                                <td>
+                                    <h6 id="user-personal-language">No language</h6>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <h6>Farbe</h6>
+                                </td>
+                                <td>
+                                    <h6 id="user-personal-color">No Color</h6>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-pane container fade" id="security">
+                <h3>Sicherheit</h3>
+                <div class="card p-2">
+                    <div class="row">
+                        <div class="col-sm-11 col-md-6 text-start">
+                            <h3>
+                                Sicherheitscode
+                            </h3>
+                            <p>
+                                Einen Sicherheitscode einrichten um Geheimedatenb mit einem PIN schützen.
+                            </p>
+                        </div>
+                        <div class="col-md-6 align-items-center d-flex">
+                            <input type="text" id="user-input-sec-code" placeholder="Code" class="form-control border-start-0 border-top-0 border-end-0 border-primary">
+                            <button onclick="setCode()" id="confirm-set-code-button-83928" class="btn btn-primary mt-md-3 ms-md-5">Code erstellen</button>
+                            <button onclick="delCode()" id="confirm-del-code-button-94504" class="btn btn-danger mt-md-3 ms-md-5 d-none">Code löschen</button>
+                            <button onclick="forgotCode()" id="confirm-forgot-code-button-57373" class="btn btn-link mt-md-3 ms-md-5 d-none">Code vergessen?</button>
+                            
+                        
+                        
+                        
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane container fade" id="privacy">
+                <h3>Datenschutz</h3>
+                <div class="card p-2">
+                    <div class="row">
+                        <div class="col-sm-11 col text-start">
+                            <h3>Unselectierbar Modus</h3>
+                            <p>Mit den Modus kann man alles nicht mehr auswählen</p>
+                        </div>
+                        <div class="col-md-1 align-items-center">
+                            <div class="form-check form-switch mt-4">
+                                <input style="scale: 1.3;" onchange="unselectMode()" checked class="form-check-input"
+                                    type="checkbox" id="unselectModeToggler">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane container fade" id="profiles">
+                <h3>Profile</h3>
+            </div>
+            <div class="tab-pane container fade" id="cloudStorage">
+                <h3>Cloudspeicher</h3>
+            </div>
+            <div class="tab-pane container fade" id="pay">
+                <h3>Zahlung & Abos</h3>
+                <h5>Dein DZ Banking ist in: <span id="user-banking-country"></span></h5>
+                <hr>
+                <div>
+                    <h3>Online-Karten</h3>
+                </div>
+                <div id="card-container">
+
+                </div>
+
+            </div>
+    </section>
+</body>
+
+</html>

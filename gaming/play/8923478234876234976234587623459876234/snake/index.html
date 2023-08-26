@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNAKE</title>
+    <link rel="stylesheet" href="http://192.168.178.27:5501/css/bootstrap.css">
+</head>
+
+<body style="background-color: rgb(255, 255, 255);">
+    <canvas id="canvas" width="720" height="480"></canvas>
+
+    <div class="bg-dark shadow-lg p-3 rounded">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col"><button onclick="DOWN()" class="btn btn-primary w-100">DOWN</button></div>
+                <div class="col"><button onclick="UP()"   class="btn btn-primary w-100">UP</button></div>
+                <div class="col"><button onclick="RIGHT()"class="btn btn-primary w-100">RIGHT</button></div>
+                <div class="col"><button onclick="LEFT()" class="btn btn-primary w-100">LEFT</button></div>
+                <div class="col-1"><a href="./../" class="btn btn-danger w-100">REC RUNNER</a></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        let canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+        let rows = 10;
+        let cols = 10
+        let snake = [
+            { x: 19, y: 3 },
+        ];
+
+
+        let food = { x: 4, y: 5 };
+        let cellWeidth = canvas.offsetWidth / cols
+        let cellHeight = canvas.offsetHeight / rows
+        let direction = "LEFT"
+        let foodcollected = false;
+
+        placeFood();
+
+
+        setInterval(gameLoop, 350);
+        document.addEventListener("keydown", keydown);
+
+
+
+        draw();
+
+        function draw() {
+            ctx.fillStyle = "black";
+            ctx.fillRect(0, 0, canvas.offsetWidth, canvas.offsetHeight)
+            ctx.fillStyle = "white";
+            add(100, 150);
+            add(130, 150);
+            add(160, 150);
+            add(190, 150);
+            add(220, 150);
+
+            snake.forEach(part => add(part.x, part.y));
+
+
+            ctx.fillStyle = "green";
+            add(food.x, food.y); //Food
+
+            requestAnimationFrame(draw)
+
+        }
+
+        function add(x, y) {
+            ctx.fillRect(x * cellWeidth, y * cellHeight, cellWeidth - 1, cellHeight - 1);
+        }
+        function placeFood() {
+            let randomx = Math.floor(Math.random() * cols);
+            let randomy = Math.floor(Math.random() * rows);
+
+            food = { x: randomx, y: randomy };
+        }
+
+        function shiftsnake() {
+            for (let i = snake.length - 1; i > 0; i--) {
+                const part = snake[i];
+                const lastPart = snake[i - 1];
+                part.x = lastPart.x;
+                part.y = lastPart.y;
+            }
+        }
+
+
+        function gameLoop() {
+
+            if (foodcollected) {
+                snake = [{
+                    x: snake[0].x,
+                    y: snake[0].y
+                },
+                ...snake];
+                foodcollected = false;
+            }
+            shiftsnake()
+            if (direction == 'LEFT') {
+                snake[0].x--;
+            } else if (direction == 'RIGHT') {
+                snake[0].x++;
+            } else if (direction == 'UP') {
+                snake[0].y--;
+            } else if (direction == 'DOWN') {
+                snake[0].y++;
+            }
+
+            if (snake[0].x == food.x && snake[0].y == food.y) [
+                foodcollected = true,
+                placeFood()
+            ]
+
+
+
+
+
+        }
+        function DOWN() {
+            direction = "DOWN"
+        }
+        function UP() {
+            direction = "UP"
+        }
+        function RIGHT() {
+            direction = "RIGHT"
+        }
+        function LEFT() {
+            direction = "LEFT"
+        }
+
+        function keydown(e) {
+            if (e.keyCode == 37 || e.key == "a") {
+                direction = "LEFT";
+            }
+            if (e.keyCode == 38 || e.key == "w") {
+                direction = "UP";
+            }
+            if (e.keyCode == 39 || e.key == "d") {
+                direction = "RIGHT";
+            }
+            if (e.keyCode == 40 || e.key == "s") {
+                direction = "DOWN";
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
