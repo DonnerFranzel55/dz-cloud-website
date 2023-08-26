@@ -9,7 +9,7 @@ function loadAll() {
 
 
 function loadPopular() {
-    fetch(delivIP + 'app_store/data/apps.json')
+    fetch(delivIP + 'app_store/data/apps.json'|| './../data/apps.json')
         .then(res => res.json())
         .then(data => {
             if (Array.isArray(data.software)) {
@@ -72,7 +72,7 @@ function loadPopular() {
 
 }
 function loadApps() {
-    fetch(delivIP + 'app_store/data/apps.json')
+    fetch(delivIP + 'app_store/data/apps.json'|| './../data/apps.json')
         .then(res => res.json())
         .then(data => {
             if (Array.isArray(data.software)) {
@@ -135,7 +135,7 @@ function loadApps() {
 
 }
 function loadGames() {
-    fetch(delivIP + 'app_store/data/apps.json')
+    fetch(delivIP + 'app_store/data/apps.json'|| './../data/apps.json')
         .then(res => res.json())
         .then(data => {
             if (Array.isArray(data.software)) {
@@ -198,7 +198,7 @@ function loadGames() {
 
 }
 function loadFree() {
-    fetch(delivIP + 'app_store/data/apps.json')
+    fetch(delivIP + 'app_store/data/apps.json'|| './../data/apps.json')
         .then(res => res.json())
         .then(data => {
             if (Array.isArray(data.software)) {
@@ -261,7 +261,7 @@ function loadFree() {
 
 }
 function loadPremium() {
-    fetch(delivIP + 'app_store/data/apps.json')
+    fetch(delivIP + 'app_store/data/apps.json'|| './../data/apps.json')
         .then(res => res.json())
         .then(data => {
             if (Array.isArray(data.software)) {
@@ -369,7 +369,7 @@ function translate(key, lang, translations) {
     return translations[lang][key];
 }
 function changeLanguage() {
-    fetch(delivIP + 'data/lang/language.json')
+    fetch(delivIP + 'data/lang/language.json'|| '/assets/data/lang/language.json')
         .then(response => response.json()) // Analysiere die Antwort als JSON
         .then(data => {
             const html = document.getElementById("html");
