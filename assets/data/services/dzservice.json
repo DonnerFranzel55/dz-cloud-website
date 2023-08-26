@@ -1,0 +1,119 @@
+{
+    "apps": [
+        {
+            "name": "Konto",
+            "icon": "/assets/img/icons/account.svg",
+            "icon_id": "user-profile-picture-apps",
+            "link": "/auth/login/login.html",
+            "id": "user-account-btn"
+        },
+        {
+            "name": "Suche",
+            "icon": "/assets/img/icons/dz/dz_search.svg",
+            "link": "",
+            "id": ""
+        },
+        {
+            "name": "Maps",
+            "icon": "/assets/img/icons/dz/dz_maps.svg",
+            "link": "",
+            "id": ""
+        },
+        {
+            "name": "VideoVault",
+            "icon": "/assets/img/icons/dz/dz_videoVault.svg",
+            "link": "/videovault/",
+            "id": ""
+        },
+        {
+            "name": "App Soore",
+            "icon": "/assets/img/icons/dz/dz_appstore.svg",
+            "link": "/app_store/app_store.html",
+            "id": ""
+        },
+        {
+            "name": "News",
+            "icon": "/assets/img/icons/dz/dz_news.svg",
+            "link": "",
+            "id": ""
+        },
+        {
+            "name": "Mail",
+            "icon": "/assets/img/icons/dz/dz_mail.svg",
+            "link": "",
+            "id": ""
+        },
+        {
+            "name": "Chat",
+            "icon": "/assets/img/icons/dz/dz_chat.svg",
+            "link": "",
+            "id": ""
+        },
+        {
+            "name": "Drive",
+            "icon": "/assets/img/icons/dz/dz_drive.svg",
+            "link": "",
+            "id": ""
+        },
+        {
+            "name": "Kalendar",
+            "icon": "/assets/img/icons/dz/dz_calendar.svg",
+            "link": "",
+            "id": ""
+        },
+        {
+            "name": "Übersetzer",
+            "icon": "/assets/img/icons/dz/dz_translate.svg",
+            "link": "",
+            "id": ""
+        },
+        {
+            "name": "Fotos",
+            "icon": "/assets/img/icons/dz/dz_photos.svg",
+            "link": "",
+            "id": ""
+        },
+        {
+            "name": "Gaming",
+            "icon": "/assets/img/icons/dz/dz_gaming.svg",
+            "link": "/gaming/",
+            "id": ""
+        },
+        {
+            "name": "Finanzen",
+            "icon": "/assets/img/icons/dz/dz_finance.svg",
+            "link": "",
+            "id": ""
+        },
+        {
+            "name": "Docs",
+            "icon": "/assets/img/icons/dz/dz_docs.svg",
+            "link": "",
+            "id": ""
+        },
+        {
+            "name": "Tabellen",
+            "icon": "/assets/img/icons/dz/dz_sheet.svg",
+            "link": "",
+            "id": ""
+        },
+        {
+            "name": "Slides",
+            "icon": "/assets/img/icons/dz/dz_slides.svg",
+            "link": "",
+            "id": ""
+        },
+        {
+            "name": "Vodify",
+            "icon": "/assets/img/icons/dz/dz_vodify.svg",
+            "link": "/vodify/browse/",
+            "id": ""
+        },
+        {
+            "name": "Books",
+            "icon": "/assets/img/icons/dz/dz_books.svg",
+            "link": "",
+            "id": ""
+        }
+    ]
+}

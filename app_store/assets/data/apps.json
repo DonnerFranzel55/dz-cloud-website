@@ -1,0 +1,57 @@
+{
+    "software": [
+        {
+            "name": "Minecraft",
+            "package_name": "com.mojang.minecraftpe",
+            "version": "1.20.15",
+            "developer": "Mojang",
+            "description": "Minecraft ist ein Spiel, das aus Blöcken besteht, die du in alles verwandeln kannst - deiner Fantasie sind keine Grenzen gesetzt. Spiele im Kreativmodus mit unbegrenzten Ressourcen oder jage im Überlebensmodus nach Werkzeugen, um Gefahren abzuwehren. Mit dem nahtlosen plattformübergreifenden Spiel von Minecraft: Bedrock Edition kannst du allein oder mit Freunden Abenteuer erleben und eine unendliche, zufällig generierte Welt voller Blöcke zum Abbauen, Biome zum Erforschen und Kreaturen zum Anfreunden (oder Bekämpfen) entdecken. In Minecraft hast du die Wahl - spiele, wie du willst!",
+            "screenshots": [
+                "https://playstore.example.com/screenshots/minecraft_screenshot1.png",
+                "https://playstore.example.com/screenshots/minecraft_screenshot2.png",
+                "https://playstore.example.com/screenshots/minecraft_screenshot3.png"
+            ],
+            "trailer": "",
+            "icon": "/app_store/instances/com.mojang.minecraftpe/icon/scale.webp",
+            "rating": 4.6,
+            "reviews": 4940000,
+            "size": "200 MB",
+            "downloads": 10000000,
+            "content_rating": "6+",
+            "last_updated": "2023-08-15",
+            "release_date": "2011-11-17",
+            "current_version_release_notes": "Vielen Dank, dass Sie Minecraft spielen! In dieser Version haben wir Fehler behoben und die Leistung verbessert.",
+            "permissions": [
+                "Internet",
+                "WLAN-Verbindungsinformationen",
+                "Speicher"
+            ],
+            "in_app_purchases": true,
+            "price": 7.99,
+            "currency": "€",
+            "categories": [
+                "Arcade",
+                "Family",
+                "Simulation",
+                "Sandbox",
+                "Casual",
+                "Multiplayer",
+                "Cooperative Multiplayer",
+                "Singleplayer",
+                "Stylized",
+                "Pixelated",
+                "Offline"
+            ],
+            "type": "game",
+            "recommended": true,
+            "in_play_pass": true,
+            "supported_devices": {
+                "phones": true,
+                "tablets": true,
+                "laptop": true,
+                "pc": true,
+                "min_dz_os_version": "1.0.4"
+            }
+        }
+    ]
+}
