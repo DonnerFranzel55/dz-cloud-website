@@ -3,8 +3,8 @@ let gems = 2000;
 let multiplier = 1.05;
 let bettedTokens = 0;
 let bettedNumber = 1;
-let maxNumber = 2;
-let freeSpins = 10;
+let maxNumber = 10;
+let freeSpins = 0;
 let originalMultiplier = 1.05; // Ursprünglicher Multiplikator
 
 let effectTimeout; // Variable zum Speichern des Timeout-Objekts
