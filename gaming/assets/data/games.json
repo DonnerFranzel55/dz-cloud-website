@@ -1,0 +1,32 @@
+{
+    "games": [
+        {
+            "id":"7962396237692376237682387264876458376",
+            "name": "TokenTaker",
+            "type": "Casino",
+            "publisher": "DZ CLOUD Games",
+            "publish_year": 2023,
+            "age": 18,
+            "playable": true,
+            "inPlayPass": true,
+            "price": 0,
+            "path": "",
+            "path_land": "",
+            "play_link": ""
+        },
+        {
+            "id":"8923478234876234976234587623459876234",
+            "name": "Rec Runner",
+            "type": "Jump n Run",
+            "publisher": "Dario Games",
+            "publish_year": 2023,
+            "age": 0,
+            "playable": true,
+            "inPlayPass": true,
+            "price": 0,
+            "path": "/gaming/play/8923478234876234976234587623459876234/assets/img/icon32.png",
+            "path_land": "",
+            "play_link": ""
+        }
+    ]
+}

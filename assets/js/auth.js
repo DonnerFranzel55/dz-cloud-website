@@ -1,4 +1,4 @@
-const delivIP = "http://192.168.178.27:5501/"
+const delivIP = "/assets/"
 window.onload = function handleToken() {
     
     loadApps()
@@ -128,7 +128,7 @@ function login() {
 }
 
 function loadApps() {
-    fetch( `${delivIP}/data/services/dzservice.json`)
+    fetch( "/assets/data/services/dzservice.json")
         .then(res => res.json())
         .then(data => {
             if (Array.isArray(data.apps)) {

@@ -1,6 +1,6 @@
-const delivIp = "http://localhost:5501/"
+const delivIp = "./assets/"
 function loadGames() {
-    fetch(delivIp + 'dz_gaming/data/games.json')
+    fetch(delivIp + 'data/games.json')
         .then(res => res.json())
         .then(data => {
             if (Array.isArray(data.games)) {
