@@ -1,15 +1,18 @@
-
+const getURL = "/app_store/assets/data/apps.json";
+const devURL = "http://localhost:5501/"
+// const getURL = "/app_store/assets/data/apps.json"
 function loadAll() {
     loadPopular();
     loadApps();
     loadGames();
     loadFree();
+    loadPremium()
 
 }
 
 
 function loadPopular() {
-    fetch('/app_store/assets/data/apps.json')
+    fetch(getURL)
         .then(res => res.json())
         .then(data => {
             if (Array.isArray(data.software)) {
@@ -25,7 +28,8 @@ function loadPopular() {
                         cardBody.classList.add("card-body", "text-center");
 
                         const gameIcon = document.createElement("img");
-                        gameIcon.src = delivIP + app.icon;
+                        //gameIcon.src = devURL + app.icon;
+                        gameIcon.src = app.icon;
                         gameIcon.alt = app.name;
                         gameIcon.classList.add("rounded-3", "img-fluid");
 
@@ -72,7 +76,7 @@ function loadPopular() {
 
 }
 function loadApps() {
-    fetch('/app_store/assets/data/apps.json')
+    fetch(getURL)
         .then(res => res.json())
         .then(data => {
             if (Array.isArray(data.software)) {
@@ -88,7 +92,8 @@ function loadApps() {
                         cardBody.classList.add("card-body", "text-center");
 
                         const gameIcon = document.createElement("img");
-                        gameIcon.src = delivIP + app.icon;
+                        //gameIcon.src = devURL + app.icon;
+                        gameIcon.src = app.icon;
                         gameIcon.alt = app.name;
                         gameIcon.classList.add("rounded-3", "img-fluid");
 
@@ -135,7 +140,7 @@ function loadApps() {
 
 }
 function loadGames() {
-    fetch('/app_store/assets/data/apps.json')
+    fetch(getURL)
         .then(res => res.json())
         .then(data => {
             if (Array.isArray(data.software)) {
@@ -151,7 +156,8 @@ function loadGames() {
                         cardBody.classList.add("card-body", "text-center");
 
                         const gameIcon = document.createElement("img");
-                        gameIcon.src = delivIP + app.icon;
+                        //gameIcon.src = devURL + app.icon;
+                        gameIcon.src = app.icon;
                         gameIcon.alt = app.name;
                         gameIcon.classList.add("rounded-3", "img-fluid");
 
@@ -198,7 +204,7 @@ function loadGames() {
 
 }
 function loadFree() {
-    fetch('/app_store/assets/data/apps.json')
+    fetch(getURL)
         .then(res => res.json())
         .then(data => {
             if (Array.isArray(data.software)) {
@@ -214,7 +220,8 @@ function loadFree() {
                         cardBody.classList.add("card-body", "text-center");
 
                         const gameIcon = document.createElement("img");
-                        gameIcon.src = delivIP + app.icon;
+                        //gameIcon.src = devURL + app.icon;
+                        gameIcon.src = app.icon;
                         gameIcon.alt = app.name;
                         gameIcon.classList.add("rounded-3", "img-fluid");
 
@@ -261,13 +268,13 @@ function loadFree() {
 
 }
 function loadPremium() {
-    fetch('/app_store/assets/data/apps.json')
+    fetch(getURL)
         .then(res => res.json())
         .then(data => {
             if (Array.isArray(data.software)) {
                 document.getElementById("premium-container").innerHTML = ""
                 data.software.forEach(app => {
-                    if (app.price === 0) {
+                    if (app.price > 5) {
                         const card = document.createElement("div");
                         card.style.cursor = "pointer"
                         card.classList.add("card", "h-100", "rounded-2", "me-2", "col-4", "col-sm-4", "col-md-2", "col-lg-2", "col-xl-2", "col-xxl-1");
@@ -277,7 +284,8 @@ function loadPremium() {
                         cardBody.classList.add("card-body", "text-center");
 
                         const gameIcon = document.createElement("img");
-                        gameIcon.src = delivIP + app.icon;
+                        //gameIcon.src = devURL + app.icon;
+                        gameIcon.src = app.icon;
                         gameIcon.alt = app.name;
                         gameIcon.classList.add("rounded-3", "img-fluid");
 
