@@ -11,11 +11,6 @@ function urlshot() {
     }
     return '';
 }
-
-// Aktuelle URL aus der Adressleiste des Browsers verwenden
-const queryPidJSON = urlshot();
-console.log(queryPidJSON);
-
 function bulid() {
     const p = urlshot()
     const devURL = "http://localhost:5501"
@@ -690,7 +685,6 @@ function bulid() {
             showError("500")
         });
 }
-
 function abbreviateNumber(number) {
     if (number < 1000) {
         return number.toString();
@@ -717,7 +711,6 @@ function ageClassController(number) {
         return "bg-primary"
     }
 }
-
 function checkPrice(n, c) {
     if (n === 0) {
         return "free"
@@ -725,7 +718,6 @@ function checkPrice(n, c) {
         return n + c
     }
 }
-
 function dateChanger(datum) {
     const eingabeFormat = "YYYY-MM-DD";
     const ausgabeFormat = "DD. MMMM YYYY";
@@ -750,7 +742,6 @@ function dateChanger(datum) {
 
     return formatiertesDatum;
 }
-
 function showError(errorID) {
    const dzadd =  document.getElementById("dzaps-729381")
 
@@ -791,9 +782,4 @@ function showError(errorID) {
 
 
 }
-
-
-
-
-
 bulid()
