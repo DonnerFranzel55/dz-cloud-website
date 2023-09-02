@@ -1,0 +1,3024 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WM 2022 - DZ CLOUD</title>
+    <script src="/assets/js/auth.js"></script>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="d-flex align-items-center justify-content-between">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-sm float-start">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Toggle button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--bs-white)"
+                        class="bi bi-list" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Navbar brand -->
+                    <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                        <img src="/favicon.png" height="50" alt="DZ Cloud Logo" loading="lazy" />
+                    </a>
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="">Über Uns</a>
+                        </li>
+
+                    </ul>
+                    <!-- Left links -->
+                </div>
+                <!-- Collapsible wrapper -->
+
+            </div>
+            <!-- Container wrapper -->
+
+
+        </nav>
+        <!-- Navbar -->
+
+        <div class="float-end">
+            <div class="d-flex">
+                <div class="p-2 flex-fill">
+                    <div class="dropdown">
+                        <button type="button" class="btn" data-bs-toggle="dropdown">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-grid" viewBox="0 0 16 16">
+                                <path
+                                    d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu container shadow-lg rounded-5 p-2"
+                            style="background-color: #282a2c; width: max-content;">
+                            <ul id="appList" class="p-3 rounded-5" style="background-color: #1b1b1b; overflow-y: auto;">
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="p-2 flex-fill">
+                    <div class="dropdown">
+                        <button type="button" class="btn" data-bs-toggle="dropdown">
+                            <img id="user-profile-picture-header" src="/assets/img/icons/account.svg"
+                                class="rounded-circle" width="24" alt="">
+                        </button>
+                        <div class="dropdown-menu shadow-lg rounded-5 p-2" style="background-color: #282a2c;">
+                            <ul class="p-2 rounded-5" style="background-color: #1b1b1b; overflow-y: auto;">
+                                <table class="w-100 table-borderless">
+                                    <tbody>
+                                        <tr class="rounded-5 d-flex">
+                                            <td class="rounded-4 flex-fill">
+                                                <div class="d-flex flex-column align-items-center">
+                                                    <div class="d-flex w-100">
+                                                        <div class="p-2 mt-2">
+                                                            <img id="user-profile-picture-accounts"
+                                                                src="/assets/img/icons/account.svg"
+                                                                class="rounded-circle" width="42" alt="">
+                                                        </div>
+                                                        <div class="p-2 flex-grow-1">
+                                                            <div class="d-flex flex-column w-100">
+                                                                <div class="p-2">
+                                                                    <h3 id="user-profile-name-accounts">Guest</h3>
+                                                                    <p id="user-profile-email-accounts">No email</p>
+                                                                </div>
+                                                                <div class="p-2">
+                                                                    <a id="user-account-access-btn"
+                                                                        href="/auth/login/login.html"
+                                                                        class="btn border">Anmelden</a>
+                                                                    <a id="user-logout-btn" class="btn border d-none"
+                                                                        href="">
+                                                                        <img src="/assets/img/icons/logout.svg"
+                                                                            width="23" alt="">
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <hr>
+                                <table class=" table-borderless">
+                                    <tbody>
+
+                                        <tr class="rounded-5 d-flex">
+                                            <td class="rounded-4 flex-fill app-hover-effect">
+                                                <div class="d-flex w-100 align-items-center">
+                                                    <div class="p-2 ">
+                                                        <img src="/assets/img/icons/add_user.svg" alt="">
+                                                    </div>
+                                                    <div class="p-2 mt-2 flex-grow-1">
+                                                        <h5>Neues Konto hinzufügen</h5>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </ul>
+                            <div class="p-2 d-flex">
+                                <button class="btn border">Datenschutzerklärung</button>
+                                <button class="btn border">Nutzunsbedingungen</button>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+    </header>
+
+    <div class="mt-4 mb-4 p-5 text-center rounded bg-primary text-white">
+        <h2>Fifa VM 2022</h2>
+        <img src="/img/flags/ar.png" width="40" alt="flag"> <b>Argentina 7 : 5 France
+        </b><img src="/img/flags/fr.png" alt="flag" width="40">
+    </div>
+    <h3 class="text-center">Sunday 18. December 2022 - Final</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/ar.png" width="30" alt="Argentina">
+                                            Argentina</td>
+                                        <td>3(4)</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/fr.png" width="30" alt="France"> France</td>
+                                        <td>3(2)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Sun. 18. December 2022 20:00</h5>
+                            <p class="card-text">
+                                No chance for France to get the winner.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <h3 class="text-center">Saturday 17. December 2022 - Semifinals</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/hr.png" width="30" alt="France"> Croatia
+                                        </td>
+                                        <td>2</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/ma.png" width="30" alt="Morocco"> Morocco</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Sat. 17. December 2022 20:00</h5>
+                            <p class="card-text">
+                                No chance.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <h3 class="text-center">Friday 16. December 2022</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="card" aria-hidden="true">
+
+                            <div class="card-body">
+                                <h5 class="card-title placeholder-glow">
+                                    <span class="placeholder col-6"></span>
+                                </h5>
+                                <p class="card-text placeholder-glow">
+                                    <span class="placeholder col-7"></span>
+                                    <span class="placeholder col-4"></span>
+                                    <span class="placeholder col-4"></span>
+                                    <span class="placeholder col-6"></span>
+                                    <span class="placeholder col-8"></span>
+                                </p>
+                                <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <h3 class="text-center">Thuesday 15. December 2022</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="card" aria-hidden="true">
+
+                            <div class="card-body">
+                                <h5 class="card-title placeholder-glow">
+                                    <span class="placeholder col-6"></span>
+                                </h5>
+                                <p class="card-text placeholder-glow">
+                                    <span class="placeholder col-7"></span>
+                                    <span class="placeholder col-4"></span>
+                                    <span class="placeholder col-4"></span>
+                                    <span class="placeholder col-6"></span>
+                                    <span class="placeholder col-8"></span>
+                                </p>
+                                <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <h3 class="text-center">Wednesday 14. December 2022 - Semifinals</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/fr.png" width="30" alt="France"> France
+                                        </td>
+                                        <td>2</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/ma.png" width="30" alt="Morocco"> Morocco</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Wed. 13. December 2022 20:00</h5>
+                            <p class="card-text">
+                                In Final are Argentina and Argentina
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <h3 class="text-center">Tuesday 13. December 2022 - Semifinals</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/ar.png" width="30" alt="Argentina">
+                                            Argentina</td>
+                                        <td>3</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/hr.png" width="30" alt="Croatia"> Croatia</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Tue. 13. December 2022 20:00</h5>
+                            <p class="card-text">
+                                Argentin ais on an Good way to win
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <h3 class="text-center">Monday 12. December 2022</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="card" aria-hidden="true">
+
+                            <div class="card-body">
+                                <h5 class="card-title placeholder-glow">
+                                    <span class="placeholder col-6"></span>
+                                </h5>
+                                <p class="card-text placeholder-glow">
+                                    <span class="placeholder col-7"></span>
+                                    <span class="placeholder col-4"></span>
+                                    <span class="placeholder col-4"></span>
+                                    <span class="placeholder col-6"></span>
+                                    <span class="placeholder col-8"></span>
+                                </p>
+                                <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <h3 class="text-center">Sunday 11. December 2022</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="card" aria-hidden="true">
+
+                            <div class="card-body">
+                                <h5 class="card-title placeholder-glow">
+                                    <span class="placeholder col-6"></span>
+                                </h5>
+                                <p class="card-text placeholder-glow">
+                                    <span class="placeholder col-7"></span>
+                                    <span class="placeholder col-4"></span>
+                                    <span class="placeholder col-4"></span>
+                                    <span class="placeholder col-6"></span>
+                                    <span class="placeholder col-8"></span>
+                                </p>
+                                <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <h3 class="text-center">Saturday 10. December 2022 - Round of 8</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/gb-eng.png" width="30" alt="England">
+                                            England</td>
+                                        <td>1</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/fr.png" width="30" alt="France"> France</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Sat. 9. December 2022 20:00</h5>
+                            <p class="card-text">
+                                No chance against France
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/ma.png" width="30" alt="Morocco"> Morocco
+                                        </td>
+                                        <td>1</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/pt.png" width="30" alt="Portugal"> Portugal</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Sat. 10. December 2022 16:00</h5>
+                            <p class="card-text">
+                                Morocco winns with 1 goal </p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <h3 class="text-center">Friday 9. December 2022 - Round of 8</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/ar.png" width="30" alt="Argentina">
+                                            Argentina</td>
+                                        <td>2(4)</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/nl.png" width="30" alt="Netherlands"> Netherlands</td>
+                                        <td>2(3)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Fri. 9. December 2022 20:00</h5>
+                            <p class="card-text">
+                                To Easy for Argentina
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/hr.png" width="30" alt="Croatia"> Croatia
+                                        </td>
+                                        <td>1(4)</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/br.png" width="30" alt="Brazil"> Brazil</td>
+                                        <td>1(2)</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Fri. 9. December 2022 16:00</h5>
+                            <p class="card-text">
+                                Brazil loses </p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <h3 class="text-center">Thuesday 8. December 2022</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="card" aria-hidden="true">
+
+                            <div class="card-body">
+                                <h5 class="card-title placeholder-glow">
+                                    <span class="placeholder col-6"></span>
+                                </h5>
+                                <p class="card-text placeholder-glow">
+                                    <span class="placeholder col-7"></span>
+                                    <span class="placeholder col-4"></span>
+                                    <span class="placeholder col-4"></span>
+                                    <span class="placeholder col-6"></span>
+                                    <span class="placeholder col-8"></span>
+                                </p>
+                                <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <h3 class="text-center">Wednesday 7. December 2022</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="card" aria-hidden="true">
+
+                            <div class="card-body">
+                                <h5 class="card-title placeholder-glow">
+                                    <span class="placeholder col-6"></span>
+                                </h5>
+                                <p class="card-text placeholder-glow">
+                                    <span class="placeholder col-7"></span>
+                                    <span class="placeholder col-4"></span>
+                                    <span class="placeholder col-4"></span>
+                                    <span class="placeholder col-6"></span>
+                                    <span class="placeholder col-8"></span>
+                                </p>
+                                <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <h3 class="text-center">Tuesday 6. December 2022 - Round of 16</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/pt.png" width="30" alt="Portugal"> Portugal
+                                        </td>
+                                        <td>6</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/ch.png" width="30" alt="Switzerland"> Switzerland</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Tue. 6. December 2022 20:00</h5>
+                            <p class="card-text">
+                                6 goals thats insane.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/ma.png" width="30" alt="Morocco"> Morocco
+                                        </td>
+                                        <td>0(3)</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/es.png" width="30" alt="Spain"> Spain</td>
+                                        <td>0(0)</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Tue. 6. December 2022 16:00</h5>
+                            <p class="card-text">
+                                More for Morocco </p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <h3 class="text-center">Monday 5. December 2022 - Round of 16</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/br.png" width="30" alt="Brazil"> Brazil
+                                        </td>
+                                        <td>4</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/kr.png" width="30" alt="South Korea"> South Korea</td>
+                                        <td>4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Mon. 5. December 2022 20:00</h5>
+                            <p class="card-text">
+                                Brazil
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/jp.png" width="30" alt="Japan"> Japan</td>
+                                        <td>1(1)</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/hr.png" width="30" alt="Croatia"> Croatia</td>
+                                        <td>1(3)</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Mon. 5. December 2022 16:00</h5>
+                            <p class="card-text">
+                                Croatia is back. </p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <h3 class="text-center">Sunday 4. December 2022 - Round of 16</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/gb-eng.png" width="30" alt="England">
+                                            England</td>
+                                        <td>3</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/sn.png" width="30" alt="Senegal"> Senegal</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Sun. 4. December 2022 20:00</h5>
+                            <p class="card-text">
+                                A win for England.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/fr.png" width="30" alt="France"> France
+                                        </td>
+                                        <td>3</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/pl.png" width="30" alt="Poland"> Poland</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Sun. 4. December 2022 16:00</h5>
+                            <p class="card-text">
+                                Oh shit not good for Poland </p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <h3 class="text-center">Saturday 3. December 2022 - Round of 16</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-warning">
+                                        <td scope="row"><img src="/img/flags/ar.png" width="30" alt="Argentina">
+                                            Argentina</td>
+                                        <td>2</td>
+
+                                    </tr>
+                                    <tr class="table-warning">
+                                        <td><img src="/img/flags/au.png" width="30" alt="Australia"> Australia</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Sat. 3. December 2022 20:00</h5>
+                            <p class="card-text">
+                                Argentina is in front they may have an Chance.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/nl.png" width="30" alt="Netherlands">
+                                            Netherlands</td>
+                                        <td>3</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/us.png" width="30" alt="USA"> USA</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Sat. 3. December 2022 16:00</h5>
+                            <p class="card-text">
+                                The USA loses </p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <h3 class="text-center">Friday 2. December 2022</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/br.png" width="30" alt="Brazil"> Brazil
+                                        </td>
+                                        <td>0</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/cm.png" width="30" alt="Cameroon"> Cameroon</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Fri. 2. December 2022 20:00</h5>
+                            <p class="card-text">
+                                Cameroon is pushing.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/rs.png" width="30" alt="Serbia"> Serbia
+                                        </td>
+                                        <td>2</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/ch.png" width="30" alt="Switzerland"> Switzerland</td>
+                                        <td>3</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Fri. 2. December 2022 20:00</h5>
+                            <p class="card-text">
+                                More interesting as the outer space. </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card ">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/gh.png" width="30" alt="Ghana"> Ghana</td>
+                                        <td>0</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/uy.png" width="30" alt="Uruguay"> Uruguay</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Fri. 2. December 2022 16:00</a></h5>
+                            <p class="card-text">
+                                Uruguay winns with 2 goals.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/kr.png" width="30" alt="South Korea"> South
+                                            Korea</td>
+                                        <td>2</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/pt.png" width="30" alt="Portugal"> Portugal</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Fri. 2. December 2022 16:00</h5>
+                            <p class="card-text">
+                                Not enogth power released.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+    <h3 class="text-center">Thuesday 1. December 2022</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/cr.png" width="30" alt="Costa Rica"> Costa
+                                            Rica</td>
+                                        <td>2</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/de.png" width="30" alt="Germany"> Germany</td>
+                                        <td>4</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Thu. 1. December 2022 20:00</h5>
+                            <p class="card-text">
+                                Germany has a Chance.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/jp.png" width="30" alt="Japan"> Japan</td>
+                                        <td>2</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/es.png" width="30" alt="Spain"> Spain</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Thu. 1. December 2022 20:00</h5>
+                            <p class="card-text">
+                                Spain isn't give up. </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card ">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/ca.png" width="30" alt="Canada"> Canada
+                                        </td>
+                                        <td>1</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/ma.png" width="30" alt="Morocco"> Morocco</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Thu. 1. December 2022 16:00</a></h5>
+                            <p class="card-text">
+                                Easy for Morocco.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/hr.png" width="30" alt="Croatia"> Croatia
+                                        </td>
+                                        <td>0</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/be.png" width="30" alt="Belgium"> Belgium</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Thu. 1. December 2022 16:00</h5>
+                            <p class="card-text">
+                                A tie agian.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+    <h3 class="text-center">Wednesday 30. November 2022</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/sa.png" width="30" alt="Saudi Arabia">
+                                            Saudi Arabia</td>
+                                        <td>1</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/mx.png" width="30" alt="Mexico"> Mexico</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Wen. 30. November 2022 20:00</h5>
+                            <p class="card-text">
+                                One goal more has done it.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/pl.png" width="30" alt="Poland"> Poland
+                                        </td>
+                                        <td>0</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/ar.png" width="30" alt="Argentina"> Argentina</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Wen. 30. November 2022 20:00</h5>
+                            <p class="card-text">
+                                Powodzenia dla Polski </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card ">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/au.png" width="30" alt="Australia">
+                                            Australia</td>
+                                        <td>0</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/dk.png" width="30" alt="Denmark"> Denmark</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Wen. 30. November 2022 16:00</a></h5>
+                            <p class="card-text">
+                                Denmark defeated by Australia.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/tn.png" width="30" alt="Tunesia"> Tunesia
+                                        </td>
+                                        <td>1</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/fr.png" width="30" alt="France"> France</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Wen. 30. November 2022 16:00</h5>
+                            <p class="card-text">
+                                Defeat against Tunesia.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+    <h3 class="text-center">Tuesday 29. November 2022</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/gb-wls.png" width="30" alt="Wales"> Wales
+                                        </td>
+                                        <td>0</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/gb-eng.png" width="30" alt="England"> England</td>
+                                        <td>3</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Tue. 29. November 2022 20:00</h5>
+                            <p class="card-text">
+                                How is this even possible.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/us.png" width="30" alt="USA"> USA</td>
+                                        <td>1</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/ir.png" width="30" alt="Iran"> Iran</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Tue. 29. November 2022 20:00</h5>
+                            <p class="card-text">
+                                USA had a grind </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card ">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/nl.png" width="30" alt="Netherlands">
+                                            Netherlands</td>
+                                        <td>2</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/qa.png" width="30" alt="Quatar"> Quatar</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Tue. 29. November 2022 16:00</a></h5>
+                            <p class="card-text">
+                                Quatar is defently out.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/ec.png" width="30" alt="Ecuador"> Ecuador
+                                        </td>
+                                        <td>1</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/sn.png" width="30" alt="Senegal"> Senegal</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Tue. 29. November 2022 16:00</h5>
+                            <p class="card-text">
+                                Senegal winns.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+    <h3 class="text-center">Monday 28. November 2022</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/pt.png" width="30" alt="Portugal"> Portugal
+                                        </td>
+                                        <td>2</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/uy.png" width="30" alt="Uruguay"> Uruguay</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Mon. 28. November 2022 20:00</h5>
+                            <p class="card-text">
+                                Portugal is in front.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/br.png" width="30" alt="Brazil"> Brazil
+                                        </td>
+                                        <td>1</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/ch.png" width="30" alt="Switzerland"> Switzerland</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Mon. 28. November 2022 17:00</h5>
+                            <p class="card-text">
+                                Brazil finished Switzerland
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card ">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/kr.png" width="30" alt="South Korea"> South
+                                            Korea</td>
+                                        <td>2</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/gh.png" width="30" alt="Ghana"> Ghana</td>
+                                        <td>3</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Mon. 28. November 2022 14:00</a></h5>
+                            <p class="card-text">
+                                Ghana winns.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/rs.png" width="30" alt="Serbia"> Serbia
+                                        </td>
+                                        <td>3</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/cm.png" width="30" alt="Cameroon"> Cameroon</td>
+                                        <td>3</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Mon. 28. November 2022 11:00</h5>
+                            <p class="card-text">
+                                A tie between Serbia and Cameroon.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+    <h3 class="text-center">Sunday 27. November 2022</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/es.png" width="30" alt="Spain"> Spain</td>
+                                        <td>1</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/de.png" width="30" alt="Germany"> Germany</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Sun. 27. November 2022 20:00</h5>
+                            <p class="card-text">
+                                Its a tie.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/ca.png" width="30" alt="Canada"> Canada
+                                        </td>
+                                        <td>1</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/hr.png" width="30" alt="Croatia"> Croatia</td>
+                                        <td>4</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Sun. 27. November 2022 17:00</h5>
+                            <p class="card-text">
+                                Costa Rica is in front with 4 goals and one they shooted in the last 10 secons.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card ">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/be.png" width="30" alt="Belgium"> Belgium
+                                        </td>
+                                        <td>0</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/ma.png" width="30" alt="Morocco"> Morocco</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Sun. 27. November 2022 14:00 <a href="/dz_tv/"><span
+                                        class="vid-tag live-badge">Video</span></a></h5>
+                            <p class="card-text">
+                                Morocco winns with 2 goals.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/jp.png" width="30" alt="Japan"> Japan</td>
+                                        <td>0</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/cr.png" width="30" alt="Costa Rica"> Costa Rica</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Sun. 27. November 2022 11:00</h5>
+                            <p class="card-text">
+                                Costa Rica winns with 1 to 0 against Japan.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+    <h3 class="text-center">Saturday 26. November 2022</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/ar.png" width="30" alt="Argentina">
+                                            Argentina</td>
+                                        <td>2</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/mx.png" width="30" alt="Mexico"> Mexico</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Sat. 26. November 2022 20:00 <a href="/dz_tv/"><span
+                                        class="vid-tag live-badge">Video</span></a>
+                            </h5>
+                            <p class="card-text">
+                                Argentina winns with 2 goals.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/fr.png" width="30" alt="France"> France
+                                        </td>
+                                        <td>2</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/dk.png" width="30" alt="Denmark"> Denmark</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Sat. 26. November 2022 17:00
+                                <a href="/dz_tv/">
+                                    <span class="vid-tag live-badge">Video</span>
+                            </h5></a>
+                            <p class="card-text">
+                                France winns with 2 goals.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/sa.png" width="30" alt="Saudi Arabia">
+                                            Saudi Arabia</td>
+                                        <td>0</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/pl.png" width="30" alt="Poland"> Poland</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Sat. 26. November 2022</h5>
+                            <p class="card-text">
+                                Poland is in front with 1 goal
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/tn.png" width="30" alt="Tunesia"> Tunesia
+                                        </td>
+                                        <td>0</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/au.png" width="30" alt="Australia"> Australia</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Sat. 26. November 2022 11:00</h5>
+                            <p class="card-text">
+                                Australia is in front with 1 goal.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+    <h3 class="text-center">Friday 25. November 2022</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/gb-eng.png" width="30" alt="England">
+                                            England</td>
+                                        <td>0</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/us.png" width="30" alt="USA"> USA</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Fri. 25. November 2022 20:00</h5>
+                            <p class="card-text">
+                                England vs. USA both with 0 goals.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/nl.png" width="30" alt="Netherlands">
+                                            Netherlands</td>
+                                        <td>0</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/ec.png" width="30" alt="Ecuador"> Ecuador</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Fri. 25. November 2022 17:00</h5>
+                            <p class="card-text">
+                                Netherlands vs. Ecuador both with 1 goals.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/qa.png" width="30" alt="Qatar"> Qatar</td>
+                                        <td>1</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/sn.png" width="30" alt="Senegal"> Senegal</td>
+                                        <td>3</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Fri. 25. November 2022 14:00</h5>
+                            <p class="card-text">
+                                Ecuador winns with 3 to 1 against Qatar.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/gb-wls.png" width="30" alt="Wales"> Wales
+                                        </td>
+                                        <td>0</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/ir.png" width="30" alt="Iran"> Iran</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Fri. 25. November 2022 11:00</h5>
+                            <p class="card-text">
+                                Iran is the winner with 2 goals.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+    <h3 class="text-center">Thuesday 24. November 2022</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/br.png" width="30" alt="Brazil"> Brazil
+                                        </td>
+                                        <td>2</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/rs.png" width="30" alt="Serbia"> Serbia</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Thu. 24. November 2022 20:00</h5>
+                            <p class="card-text">
+                                Brazil winns with 2 goals.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/pt.png" width="30" alt="Portugal"> Portugal
+                                        </td>
+                                        <td>3</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/gh.png" width="30" alt="Ghana"> Ghana</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Thu. 24. November 2022 17:00</h5>
+                            <p class="card-text">
+                                Portugal winns with 3 goals.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/uy.png" width="30" alt="Uruguay"> Uruguay
+                                        </td>
+                                        <td>0</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/kr.png" width="30" alt="Sorth Korea"> Sorth Korea</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Thu. 24. November 2022 14:00</h5>
+                            <p class="card-text">
+                                It's a tie between Uruguay and South Korea.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/ch.png" width="30" alt="Switzerland">
+                                            Switzerland</td>
+                                        <td>1</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/cm.png" width="30" alt="Cameroon"> Cameroon</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Thu. 24. November 2022 11:00</h5>
+                            <p class="card-text">
+                                Switzerland is the winner with 1 goals.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+    <h3 class="text-center">Wednesday 23. November 2022</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/be.png" width="30" alt="Belgium"> Belgium
+                                        </td>
+                                        <td>1</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/ca.png" width="30" alt="Canada"> Canada</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Wen. 23. November 2022 20:00</h5>
+                            <p class="card-text">
+                                Belgium winns with 1 goals.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/es.png" width="30" alt="Spain"> Spain</td>
+                                        <td>7</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/cr.png" width="30" alt="Costa Rica"> Costa Rica</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Wen. 23. November 2022 17:00</h5>
+                            <p class="card-text">
+                                Spain winns with 7 goals.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/de.png" width="30" alt="Germany"> Germany
+                                        </td>
+                                        <td>1</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/jp.png" width="30" alt="Japan"> Japan</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Thu. 24. November 2022 14:00</h5>
+                            <p class="card-text">
+                                Japan winn with 2 goals.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/ma.png" width="30" alt="Morocco"> Morocco
+                                        </td>
+                                        <td>0</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/hr.png" width="30" alt="Croatia"> Croatia</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Thu. 24. November 2022 11:00</h5>
+                            <p class="card-text">
+                                A tie between Morocco and Croatia.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+    <h3 class="text-center">Tuesday 22. November 2022</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/fr.png" width="30" alt="France"> France
+                                        </td>
+                                        <td>4</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/au.png" width="30" alt="Australia"> Australia</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="#!">
+                                <a href="#!">
+                                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                                </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Tue. 23. November 2022 20:00</h5>
+                            <p class="card-text">
+                                France winns with 4 goals.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/mx.png" width="30" alt="Mexico"> Mexico
+                                        </td>
+                                        <td>0</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/pl.png" width="30" alt="Poland"> Poland</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Tue. 23. November 2022 17:00</h5>
+                            <p class="card-text">
+                                Mexico vs. Poland both with 0 goals.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/dk.png" width="30" alt="Denmark"> Denmark
+                                        </td>
+                                        <td>0</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/tn.png" width="30" alt="Tunesia"> Tunesia</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Tue. 23. November 2022 14:00</h5>
+                            <p class="card-text">
+                                No one winns it's a tie.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/ar.png" width="30" alt="Argentina">
+                                            Argentina</td>
+                                        <td>1</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/sa.png" width="30" alt="Saudi Arabia"> Saudi Arabia
+                                        </td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Tue. 23. November 2022 11:00</h5>
+                            <p class="card-text">
+                                Saudi Arabia is the winner with 2 goals.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+    <h3 class="text-center">Monday 21. November 2022</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/gb-wls.png" width="30" alt="Wales"> Wales
+                                        </td>
+                                        <td>1</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/us.png" width="30" alt="USA"> USA</td>
+                                        <td>1</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Mon. 23. November 2022 17:00</h5>
+                            <p class="card-text">
+                                The game ends with a tie.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/sn.png" width="30" alt="Senegal"> Senegal
+                                        </td>
+                                        <td>0</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/nl.png" width="30" alt="Netherlands"> Netherlands</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Mon. 23. November 2022 14:00</h5>
+                            <p class="card-text">
+                                The Netherlands winns with 2 goals.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-success">
+                                        <td scope="row"><img src="/img/flags/gb-eng.png" width="30" alt="England">
+                                            England</td>
+                                        <td>6</td>
+
+                                    </tr>
+                                    <tr class="table-danger">
+                                        <td><img src="/img/flags/ir.png" width="30" alt="Iran"> Iran</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Mon. 23. November 2022 11:00</h5>
+                            <p class="card-text">
+                                England is the winner with 6 goals.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+    <h3 class="text-center">Sunday 20. November 2022</h3>
+    <div class="container-fluid">
+        <section>
+            <div class="row">
+                <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <div class="bg-image hover-overlay ripple" data-bs-ripple-color="light">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Goals</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-danger">
+                                        <td scope="row"><img src="/img/flags/qa.png" width="30" alt="Quatar"> Quatar
+                                        </td>
+                                        <td>0</td>
+
+                                    </tr>
+                                    <tr class="table-success">
+                                        <td><img src="/img/flags/ec.png" width="30" alt="Ecuador"> Ecuador</td>
+                                        <td>2</td>
+                                    </tr>
+                                </tbody>
+                            </table><a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                        </div>
+
+                        <div class="card-body">
+                            <h5 class="card-title">Sun. 20. November 2022 11:00</h5>
+                            <p class="card-text">
+                                Ecuador winns the first World Cup Round with 2 goals.
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4">
+
+
+            <!-- Section: Text -->
+            <section class="mb-4">
+                <img src="/img/pictures/logo/00226b96-968a-4360-b595-30ff04cf3967.png" alt="DZ CLOUD LOGO" width="90">
+                <p>
+                    More Link to our Project and Services
+                </p>
+            </section>
+            <!-- Section: Text -->
+
+            <!-- Section: Links -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Explore</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="/" class="text-white">Home</a>
+                            </li>
+                            <li>
+                                <a href="" class="text-white">Cloud Gaming</a>
+                            </li>
+                            <li>
+                                <a href="/app_store/" class="text-white">App Store</a>
+                            </li>
+                            <li>
+                                <a href="/dz_cloud_os/" class="text-white">Operating System</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">DZ CLOUD Family</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Resources</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="https://fonts.google.com/icons" class="text-white">Icons</a>
+                            </li>
+                            <li>
+                                <a href="/infos/status/" class="text-white">Status</a>
+                            </li>
+                            <li>
+                                <a href="/de/d/c/" class="text-white">Download Center</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Support</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Account</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Payment</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Subscription</a>
+                            </li>
+                            <li>
+                                <a href="/de/return/" class="text-white">Return</a>
+                            </li>
+                            <li>
+                                <a href="/de/support/" class="text-white">Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">More</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white">Developer</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Framework</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white">Third party providers</a>
+                            </li>
+                            <li>
+                                <a href="/verify/" class="text-white">Verify</a>
+                            </li>
+                            <li>
+                                <a href="/infos/news/" class="text-white">News</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Grid column-->
+
+
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2018 - 2023 Copyright:
+            <a class="text-white" href="https://www.dz-cloud.de/">DZ CLOUD</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -28,7 +28,6 @@ function getLocation() {
     }
     navigator.geolocation.getCurrentPosition(success, error)
 }
-
 function loadWeather(data, city) {
 
     const latitude = data.latitude;
@@ -100,13 +99,12 @@ function loadWeather(data, city) {
             cardContainer.appendChild(cardDiv);
         })
 }
-
 function WbIconPath(weather) {
     if (weather === "sonnig" || weather === "klar" || weather === "wolkenlos") {
         return "/assets/img/icons/weather/wb_sunny.svg"
     } else if (weather === "leicht bewölkt" || weather === "bedeckt" || weather === "stark bewölkt") {
         return "/assets/img/icons/weather/wb_cloudy.svg"
-    } else if (weather === "wolkig" || weather === "heiter") {
+    } else if (weather === "wolkig" || weather === "heiter" || weather === "bewölkt") {
         return "/assets/img/icons/weather/wb_cloudy.svg"
     } else if (weather === "starker Regen" || weather === "leichter Regen" || weather === "starker Regenschauer") {
         return "/assets/img/icons/weather/wb_rain.svg"
