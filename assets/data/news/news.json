@@ -62,6 +62,22 @@
                 ],
                 "reporter": "Über dieses Thema berichtete NDR Info am 01. September 2023 um 15:15 Uhr."
             
+            },
+            {
+                "title": "Die Fußball Weltmeisterschaft in Quatar ist beendet",
+                "publish_time": "2022-12-18T18:00Z",
+                "path": "/news/wm22/QuatarWM2022.webp",
+                "source": "/news/wm22/index.html",
+                "shortText": "Die Tabellen für alle Fußballspiele der Weltmeisterschaft 2022 aus Quatar",
+                "articleText": "",
+                "additionalText": "",
+                "tags":[
+                    "Sport",
+                    "Ausland",
+                    "Fifa"
+                ],
+                "reporter": "Dieser Artikel ist LIVE mit verfasst wurden."
+            
             }
         ]
     }
