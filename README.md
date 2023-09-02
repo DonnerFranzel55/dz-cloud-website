@@ -7,8 +7,6 @@ Welcome to the dz-cloud-website repository! This repository contains the source 
 - [About](#about)
 - [Features](#features)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## About
