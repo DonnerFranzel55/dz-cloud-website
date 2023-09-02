@@ -1,0 +1,142 @@
+{
+    "stocks": [
+        {
+            "symbol": "DAX",
+            "name": "DAX 30",
+            "currency": "PKT",
+            "type": "Index",
+            "description": "The DAX 30 is a stock market index representing the 30 largest and most liquid German companies trading on the Frankfurt Stock Exchange.",
+            "current_price": 15840.34,
+            "previous_close": 15947.08,
+            "daily_history": [
+                {
+                    "date": "2023-09-01",
+                    "price": 15947.08
+                },
+                {
+                    "date": "2023-08-31",
+                    "price": 15700.25
+                },
+                {
+                    "date": "2023-08-30",
+                    "price": 15720.89
+                }
+            ]
+        },
+        {
+            "symbol": "SZSE",
+            "name": "Shenzhen Composite Index",
+            "type": "Index",
+            "currency": "PKT",
+            "description": "The Shenzhen Composite Index is a stock market index of the Shenzhen Stock Exchange in China, composed of mainly small and medium-sized companies.",
+            "current_price": 10463.74,
+            "previous_close": 10418.21,
+            "daily_history": [
+                {
+                    "date": "2023-09-01",
+                    "price": 10418.21
+                },
+                {
+                    "date": "2023-08-31",
+                    "price": 3300.45
+                },
+                {
+                    "date": "2023-08-30",
+                    "price": 3295.20
+                }
+            ]
+        },
+        {
+            "symbol": "DJI",
+            "name": "Dow Jones Industrial Average",
+            "type": "Index",
+            "currency": "PKT",
+            "description": "The Dow Jones Industrial Average, Dow Jones, or simply the Dow, is a stock market index of 30 prominent companies listed on stock exchanges in the United States.",
+            "current_price": 34837.71,
+            "previous_close": 34721.91,
+            "daily_history": [
+                {
+                    "date": "2023-09-01",
+                    "price": 34721.91
+                },
+                {
+                    "date": "2023-08-31",
+                    "price": 35008.60
+                },
+                {
+                    "date": "2023-08-30",
+                    "price": 35021.88
+                }
+            ]
+        },
+        {
+            "symbol": "TLSA",
+            "name": "Tesla Inc",
+            "type": "Stock",
+            "currency": "$",
+            "description": "Tesla, Inc. is an American multinational automotive and clean energy company headquartered in Austin, Texas. ",
+            "current_price": 245.01,
+            "previous_close": 258.08,
+            "daily_history": [
+                {
+                    "date": "2023-09-01",
+                    "price": 258.08
+                },
+                {
+                    "date": "2023-08-31",
+                    "price": 256.27
+                },
+                {
+                    "date": "2023-08-30",
+                    "price": 254.21
+                }
+            ]
+        }
+    ],
+    "currencies": [
+        {
+          "currency": "EUR",
+          "symbol": "€",
+          "name": "Euro to US Dollar",
+          "description": "Official currency of the Eurozone.",
+          "current_rate": 1.0798,
+          "previous_rate": 1.0844,
+          "history": [
+            {
+              "date": "2023-09-01",
+              "rate": 1.0844
+            },
+            {
+              "date": "2023-08-31",
+              "rate": 1.0929
+            },
+            {
+              "date": "2023-08-30",
+              "rate": 1.0870
+            }
+          ]
+        },
+        {
+          "currency": "USD",
+          "symbol": "$",
+          "name": "US Dollar to Euro",
+          "description": "Official currency of the United States.",
+          "current_rate": 0.9263,
+          "previous_rate": 0.9225,
+          "history": [
+            {
+              "date": "2023-09-01",
+              "rate": 0.9225
+            },
+            {
+              "date": "2023-08-31",
+              "rate": 0.9141
+            },
+            {
+              "date": "2023-08-30",
+              "rate": 0.9201
+            }
+          ]
+        }
+      ]
+}

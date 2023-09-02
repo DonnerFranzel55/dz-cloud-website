@@ -113,3 +113,186 @@ function WbIconPath(weather) {
     }
 
 }
+function loadStocks() {
+    fetch("/assets/data/stocks/stocks.json")
+        .then(res => res.json())
+        .then(data => {
+
+            data.stocks.forEach(stock => {
+                const table = document.querySelector('#stocks-table');
+
+                const tr = document.createElement('tr');
+
+                const tdSymbol = document.createElement('td');
+                tdSymbol.textContent = stock.symbol;
+                tdSymbol.title = stock.name
+
+                const tdValue = document.createElement('td');
+                tdValue.textContent = stock.current_price + stock.currency;
+
+                const tdChange = document.createElement('td');
+                tdChange.textContent = (stock.current_price - stock.daily_history[0].price).toFixed(2)
+
+                const tdChangePercent = document.createElement('td');
+                tdChangePercent.textContent = (stock.current_price / stock.daily_history[0].price).toFixed(2);
+                
+                tr.appendChild(tdSymbol);
+                tr.appendChild(tdValue);
+                tr.appendChild(tdChange);
+                tr.appendChild(tdChangePercent);
+                table.appendChild(tr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+            });
+        })
+}
+function loadCurrenies() {
+    fetch("/assets/data/stocks/stocks.json")
+        .then(res => res.json())
+        .then(data => {
+
+            data.currencies.forEach(currency => {
+
+                var oldVPI = currency.current_rate;
+                var newVPI = currency.history[0].rate
+
+                const table = document.querySelector('#currency-table');
+
+                const tr = document.createElement('tr');
+
+                const tdSymbol = document.createElement('td');
+                tdSymbol.textContent = currency.name;
+                tdSymbol.title = currency.symbol
+
+                const tdValue = document.createElement('td');
+                tdValue.textContent = currency.current_rate;
+
+                const tdChange = document.createElement('td');
+                tdChange.textContent = (((newVPI - oldVPI) / oldVPI) * 100).toFixed(2)
+
+                const tdChangePercent = document.createElement('td');
+                tdChangePercent.textContent = ((((newVPI - oldVPI) / oldVPI))).toFixed(4);
+                
+                tr.appendChild(tdSymbol);
+                tr.appendChild(tdValue);
+                tr.appendChild(tdChange);
+                tr.appendChild(tdChangePercent);
+                table.appendChild(tr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+            });
+        })
+}
+function loadNews() {
+    fetch("/assets/data/news/news.json")
+    .then(res => res.json())
+    .then(data => {
+        data.news.inland.forEach(article => {
+            
+            var newsContainer = document.querySelector('#dzjsrtnlc')
+
+            var card = document.createElement('div');
+            card.classList.add("card", "me-2", "overflow-hidden", "col-10", "col-sm-7", "col-md-5", "col-lg-4", "col-xl-3", "col-xxl-3")
+
+            var imgDiv = document.createElement('div');
+            var img = document.createElement('img');
+            img.src = article.path;
+            img.alt = article.title;
+            img.classList.add("img-fluid")
+            imgDiv.appendChild(img);
+            card.appendChild(imgDiv)
+
+            var cardBody = document.createElement('div');
+            cardBody.classList.add("card-body");
+
+            var title = document.createElement('h3');
+            title.textContent = article.title;
+
+            var time = document.createElement('h6');
+            time.textContent = formatDateTime(article.publish_time)
+
+            var teaser = document.createElement('h5')
+            teaser.textContent = article.shortText
+
+            var sourceAnchor = document.createElement('a');
+            sourceAnchor.href = article.source;
+            sourceAnchor.target= "_blank"
+            sourceAnchor.textContent = "Zur Nachrichten Quelle"
+
+            cardBody.appendChild(title)
+            cardBody.appendChild(time)
+            cardBody.appendChild(teaser)
+            cardBody.appendChild(sourceAnchor)
+            card.appendChild(cardBody)
+
+
+            newsContainer.appendChild(card)
+
+
+
+
+
+
+
+
+
+
+
+
+
+        });
+    })
+}
+
+
+
+function formatDateTime(isoDateTime) {
+    const options = {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      hour12: false, 
+      timeZoneName: 'short',
+    };
+  
+    const date = new Date(isoDateTime);
+    return date.toLocaleString('de-DE', options);
+  }
+
+
+
+
+
+
+
+
+
+
+
+loadCurrenies()
+loadStocks()
+loadNews()
