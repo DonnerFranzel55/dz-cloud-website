@@ -13,7 +13,7 @@ function urlshot() {
 }
 function bulid() {
     const p = urlshot()
-    const devURL = "http://localhost:5501"
+    var devURL = "http://192.168.178.27:5501"
     fetch('/app_store/assets/data/apps.json')
         .then(res => res.json())
         .then(data => {
@@ -71,7 +71,7 @@ function bulid() {
 
                         const appIMG = document.createElement("img");
                         //appIMG.src = devURL + app.icon;
-                        appIMG.src = app.icon;
+                        appIMG.src = app.icon_48 || app.icon;
                         appIMG.classList.add("rounded")
                         appIMG.height = "48"
                         appIMGCol.appendChild(appIMG);
@@ -128,13 +128,15 @@ function bulid() {
                         leftColDataDiv.appendChild(advDataDiv)
 
 
-                        //VR
-                        const vr1 = document.createElement("div")
-                        vr1.classList.add("vr", "mx-2")
-                        advDataDiv.appendChild(vr1)
+
 
                         //Recommended
                         if (app.recommended === true) {
+                            //VR
+                            const vr1 = document.createElement("div")
+                            vr1.classList.add("vr", "mx-2")
+                            advDataDiv.appendChild(vr1)
+
                             const appRecommendedRow = document.createElement("div");
                             appRecommendedRow.classList.add("row")
 
@@ -186,8 +188,9 @@ function bulid() {
                         const BTNControllsDiv = document.createElement("div");
                         BTNControllsDiv.classList.add("mt-3")
 
+                        //install button
                         const installBTN = document.createElement("button");
-                        installBTN.style.width = "203px"
+                        installBTN.style.width = "200px"
                         installBTN.classList.add("btn", "btn-success")
 
                         const installBTNspan = document.createElement("span")
@@ -196,46 +199,63 @@ function bulid() {
                         installBTN.appendChild(installBTNspan);
                         BTNControllsDiv.appendChild(installBTN);
 
+
+                        if (app.cloud_gaming === true) {
+                            //cloud gaming button
+                            const cloudGamingBTN = document.createElement("a");
+                            cloudGamingBTN.classList.add("btn", "btn-secondary", "ms-0", "ms-sm-1", "mt-1", "mt-sm-0");
+                            cloudGamingBTN.title = "Play with Cloud Gaming"
+                            cloudGamingBTN.href = app.cloud_gaming_link
+
+                            const cloudGamingBTNicon = document.createElement("span");
+                            cloudGamingBTNicon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/></svg>'
+
+                            cloudGamingBTN.appendChild(cloudGamingBTNicon);
+                            BTNControllsDiv.appendChild(cloudGamingBTN);
+
+                        }
+
+                        //share button
                         const shareBTN = document.createElement("button");
-                        shareBTN.classList.add("btn", "btn-secondary", "ms-1");
+                        shareBTN.classList.add("btn", "btn-secondary", "ms-1", "mt-1", "mt-sm-0");
 
                         const shareBTNicon = document.createElement("span");
                         shareBTNicon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentcolor"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92-1.31-2.92-2.92-2.92z"/></svg>'
 
-                        const shareBTNspan = document.createElement("span");
-                        shareBTNspan.classList.add("ms-1");
-                        shareBTNspan.textContent = "Share";
-
                         shareBTN.appendChild(shareBTNicon);
-                        shareBTN.appendChild(shareBTNspan);
                         BTNControllsDiv.appendChild(shareBTN);
+
+
 
                         leftColDataDiv.appendChild(BTNControllsDiv);
 
+                        appHeaderDataDiv.appendChild(leftColDataDiv);
+                        if (app.trailer !== "") {
+                            //Right Col
+                            const rightColDataDiv = document.createElement("div");
+                            rightColDataDiv.classList.add("col");
 
+                            const trailerDiv = document.createElement("div");
+                            //trailerDiv.classList.add("ratio", "ratio-16x9");
 
-                        //Right Col
-                        const rightColDataDiv = document.createElement("div");
-                        rightColDataDiv.classList.add("col");
+                            const trailer = document.createElement("video");
+                            trailer.classList.add("rounded-5")
+                            trailer.height = "400"
+                            trailer.controls = true
+                            trailer.src = devURL + app.trailer;
 
-                        const trailerDiv = document.createElement("div");
-                        //trailerDiv.classList.add("ratio", "ratio-16x9");
+                            trailerDiv.appendChild(trailer);
+                            rightColDataDiv.appendChild(trailerDiv);
 
-                        const trailer = document.createElement("video");
-                        trailer.classList.add("rounded-5")
-                        trailer.height = "400"
-                        trailer.controls = true
-                        trailer.src = devURL + app.trailer;
-
-                        trailerDiv.appendChild(trailer);
-                        rightColDataDiv.appendChild(trailerDiv);
+                            appHeaderDataDiv.appendChild(rightColDataDiv);
+                        }
 
 
 
 
                         //End of Landing Section
-                        appHeaderDataDiv.appendChild(leftColDataDiv);
-                        appHeaderDataDiv.appendChild(rightColDataDiv);
+
+
                         headerdiv.appendChild(appHeaderDataDiv);
                         headersection.appendChild(headerdiv);
                         appDetails.appendChild(headersection);
@@ -670,13 +690,11 @@ function bulid() {
                         appDetails.appendChild(moreDetailSection)
                         document.getElementById("title").textContent = app.name + " - DZ App Store"
                         console.log("success");
-                    } else {
-                        console.log("Error: 404");
-                        showError("404")
-                    }
+                    } 
                 });
             } else {
-                showError("404")
+                console.log("Error: 404");
+                        showError("404")
                 console.error("Invalid Product Identifyer");
             }
         })
@@ -713,7 +731,7 @@ function ageClassController(number) {
 }
 function checkPrice(n, c) {
     if (n === 0) {
-        return "free"
+        return "Download"
     } else {
         return n + c
     }
@@ -743,7 +761,7 @@ function dateChanger(datum) {
     return formatiertesDatum;
 }
 function showError(errorID) {
-   const dzadd =  document.getElementById("dzaps-729381")
+    const dzadd = document.getElementById("dzaps-729381")
 
     const landingDiv = document.createElement("div");
     landingDiv.classList.add("bg-dark", "mt-2", "shadow", "p-5", "text-center")
@@ -754,32 +772,26 @@ function showError(errorID) {
 
     const errorDetailText = document.createElement("h5");
     if (errorID === "404") {
-
-        errorDetailText.textContent= "The App or Game wasn't found!"
+        errorDetailText.textContent = "The App or Game wasn't found!"
     } else if (errorID === "500") {
-        errorDetailText.textContent= "Sorry, but we've some problems to handle your request!"
+        errorDetailText.textContent = "Sorry, but we've some problems to handle your request!"
     }
     landingDiv.appendChild(errorDetailText)
 
     const homeBTN = document.createElement("a");
-    homeBTN.href= "/app_store/app_store.html";
+    homeBTN.href = "/app_store/app_store.html";
     homeBTN.classList.add("btn", "btn-primary", "mt-3")
-    
+
     const homeBTNspan = document.createElement("span");
     homeBTNspan.textContent = "Back to Overview";
     homeBTNspan.classList.add("mx-5", "fs-5")
     homeBTN.appendChild(homeBTNspan)
-    
-    
+
+
     landingDiv.appendChild(homeBTN)
 
 
     dzadd.appendChild(landingDiv)
-
-
-
-
-
-
+    document.getElementById("title").textContent = errorID + " - Error"
 }
 bulid()

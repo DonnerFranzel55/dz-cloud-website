@@ -1,4 +1,4 @@
-const delivIP = "/assets/"
+var delivIP = "/assets/"
 window.onload = function handleToken() {
     
     loadApps()

@@ -14,6 +14,7 @@
             ],
             "trailer": "/app_store/instances/com.mojang.minecraftpe/trailer/trailer_1.mp4",
             "icon": "https://play-lh.googleusercontent.com/VSwHQjcAttxsLE47RuS4PqpC4LT7lCoSjE7Hx5AW_yCxtDvcnsHHvm5CTuL5BPN-uRTP=s512-rw",
+            "icon_48": "https://play-lh.googleusercontent.com/VSwHQjcAttxsLE47RuS4PqpC4LT7lCoSjE7Hx5AW_yCxtDvcnsHHvm5CTuL5BPN-uRTP=s48-rw",
             "rating": 4.6,
             "reviews": 4940000,
             "size": "200 MB",
@@ -46,12 +47,59 @@
             "type": "game",
             "recommended": true,
             "in_play_pass": true,
+            "cloud_gaming": false,
+            "cloud_gaming_link": "",
             "supported_devices": {
                 "phones": true,
                 "tablets": true,
                 "laptop": true,
                 "pc": true,
                 "min_dz_os_version": "1.0.4"
+            }
+        },
+        {
+            "name": "Rec Runner",
+            "package_name": "de.dargames.recrunner",
+            "version": "0.5.6",
+            "developer": "Dar Games Studio",
+            "description": "Spiele einen spannenden Jump and Run Spiel.",
+            "screenshots": [
+                "http://192.168.178.27:5501/app_store/instances/de.dargames.recrunner/screenshots/ifqfq0fkijhof90u50isfnsidfpjkjfok0iuhIj09rifbnfknfo.png"
+            ],
+            "trailer": "",
+            "icon": "http://192.168.178.27:5501/app_store/instances/de.dargames.recrunner/icon/scale.png",
+            "icon_48": "",
+            "rating": 0,
+            "reviews": 0,
+            "size": "2 MB",
+            "downloads": 0,
+            "content_rating": 0,
+            "last_updated": "2023-08-18",
+            "release_date": "2023-08-18",
+            "current_version_release_notes": "Neue Sprachen",
+            "permissions": [
+                "Speicher"
+            ],
+            "in_app_purchases": false,
+            "price": 0,
+            "currency": "€",
+            "categories": [
+                "Singleplayer",
+                "Stylized",
+                "Pixelated",
+                "Offline"
+            ],
+            "type": "game",
+            "recommended": false,
+            "in_play_pass": false,
+            "cloud_gaming": true,
+            "cloud_gaming_link": "http://127.0.0.1:5505/gaming/play/8923478234876234976234587623459876234/",
+            "supported_devices": {
+                "phones": true,
+                "tablets": true,
+                "laptop": true,
+                "pc": true,
+                "min_dz_os_version": "1.0.0"
             }
         }
     ]
