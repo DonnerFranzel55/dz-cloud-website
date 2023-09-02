@@ -41,5 +41,5 @@ You start the server by clicking the Go Live Button on the Bottom Right side of 
 You can change code and push it to GitHub to help us inprove the Site you cann visit our side on https://www.dz-cloud.de/
 
 
-## Licence
+## License
 This GitHub Repository and all Code in it are landmarks of DZ CLOUD Inc Company and not puplic usable. All CDN Provided CSS, JS, Images, HTML or other CDN Files or Data are MIT Licenced and free to use.
