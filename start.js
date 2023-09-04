@@ -134,8 +134,8 @@ function loadStocks() {
                 tdChange.textContent = (stock.current_price - stock.daily_history[0].price).toFixed(2)
 
                 const tdChangePercent = document.createElement('td');
-                tdChangePercent.textContent = (stock.current_price / stock.daily_history[0].price).toFixed(2);
-                
+                tdChangePercent.textContent = ((stock.current_price - stock.daily_history[0].price) / stock.daily_history[0].price * 100).toFixed(2);
+
                 tr.appendChild(tdSymbol);
                 tr.appendChild(tdValue);
                 tr.appendChild(tdChange);
@@ -179,11 +179,11 @@ function loadCurrenies() {
                 tdValue.textContent = currency.current_rate;
 
                 const tdChange = document.createElement('td');
-                tdChange.textContent = (((newVPI - oldVPI) / oldVPI) * 100).toFixed(2)
+                tdChange.textContent = (((newVPI - oldVPI) / oldVPI)).toFixed(2)
 
                 const tdChangePercent = document.createElement('td');
-                tdChangePercent.textContent = ((((newVPI - oldVPI) / oldVPI))).toFixed(4);
-                
+                tdChangePercent.textContent = (((newVPI - oldVPI) / oldVPI) * 100).toFixed(2);
+
                 tr.appendChild(tdSymbol);
                 tr.appendChild(tdValue);
                 tr.appendChild(tdChange);
@@ -207,50 +207,48 @@ function loadCurrenies() {
 }
 function loadNews() {
     fetch("/assets/data/news/news.json")
-    .then(res => res.json())
-    .then(data => {
-        data.news.inland.forEach(article => {
-            
-            var newsContainer = document.querySelector('#dzjsrtnlc')
+        .then(res => res.json())
+        .then(data => {
+            data.news.inland.forEach(article => {
 
-            var card = document.createElement('div');
-            card.classList.add("card", "me-2", "overflow-hidden", "col-10", "col-sm-7", "col-md-5", "col-lg-4", "col-xl-3", "col-xxl-3")
+                var newsContainer = document.querySelector('#dzjsrtnlc')
 
-            var imgDiv = document.createElement('div');
-            var img = document.createElement('img');
-            img.src = article.path;
-            img.alt = article.title;
-            img.classList.add("img-fluid")
-            imgDiv.appendChild(img);
-            card.appendChild(imgDiv)
+                var card = document.createElement('div');
+                card.classList.add("card", "me-2", "overflow-hidden", "col-10", "col-sm-7", "col-md-5", "col-lg-4", "col-xl-3", "col-xxl-3")
 
-            var cardBody = document.createElement('div');
-            cardBody.classList.add("card-body");
+                var imgDiv = document.createElement('div');
+                var img = document.createElement('img');
+                img.src = article.path;
+                img.alt = article.title;
+                img.classList.add("img-fluid")
+                imgDiv.appendChild(img);
+                card.appendChild(imgDiv)
 
-            var title = document.createElement('h3');
-            title.textContent = article.title;
+                var cardBody = document.createElement('div');
+                cardBody.classList.add("card-body");
 
-            var time = document.createElement('h6');
-            time.textContent = formatDateTime(article.publish_time)
+                var title = document.createElement('h3');
+                title.textContent = article.title;
 
-            var teaser = document.createElement('h5')
-            teaser.textContent = article.shortText
+                var time = document.createElement('h6');
+                time.textContent = formatDateTime(article.publish_time)
 
-            var sourceAnchor = document.createElement('a');
-            sourceAnchor.href = article.source;
-            sourceAnchor.target= "_blank"
-            sourceAnchor.textContent = "Zur Nachrichten Quelle"
+                var teaser = document.createElement('h5')
+                teaser.textContent = article.shortText
 
-            cardBody.appendChild(title)
-            cardBody.appendChild(time)
-            cardBody.appendChild(teaser)
-            cardBody.appendChild(sourceAnchor)
-            card.appendChild(cardBody)
+                var sourceAnchor = document.createElement('a');
+                sourceAnchor.href = article.source;
+                sourceAnchor.target = "_blank"
+                sourceAnchor.textContent = "Zur Nachrichten Quelle"
 
-
-            newsContainer.appendChild(card)
+                cardBody.appendChild(title)
+                cardBody.appendChild(time)
+                cardBody.appendChild(teaser)
+                cardBody.appendChild(sourceAnchor)
+                card.appendChild(cardBody)
 
 
+                newsContainer.appendChild(card)
 
 
 
@@ -262,26 +260,28 @@ function loadNews() {
 
 
 
-        });
-    })
+
+
+            });
+        })
 }
 
 
 
 function formatDateTime(isoDateTime) {
     const options = {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      hour: 'numeric',
-      minute: 'numeric',
-      hour12: false, 
-      timeZoneName: 'short',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        hour12: false,
+        timeZoneName: 'short',
     };
-  
+
     const date = new Date(isoDateTime);
     return date.toLocaleString('de-DE', options);
-  }
+}
 
 
 

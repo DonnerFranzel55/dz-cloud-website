@@ -2,6 +2,21 @@
     "news":{
         "inland":[
             {
+                "title": "Putin beharrt auf Forderungen an den Westen",
+                "publish_time": "2023-09-04T18:45Z",
+                "path": "https://images.tagesschau.de/image/3b2aa372-cbfb-4d05-a2cd-2c8c35ddee40/AAABimDBN8Y/AAABibBx2rU/20x9-1280/putin-erdogan-190.webp",
+                "source": "https://www.tagesschau.de/ausland/europa/erdogan-putin-sotschi-104.html",
+                "shortText": "Bei einem Treffen in Sotschi haben Russlands Präsident Putin und sein türkischer Amtskollege Erdogan über ein Wiederaufleben des Getreideabkommens verhandelt.",
+                "articleText": "Bei einem Treffen in Sotschi haben Russlands Präsident Putin und sein türkischer Amtskollege Erdogan über ein Wiederaufleben des Getreideabkommens verhandelt. Putin blieb bei seinen Forderungen. Erdogan zeigte sich aber optimistisch.Der türkische Präsident Recep Tayyip Erdogan hat bei einem Treffen mit Kremlchef Wladimir Putin im russischen Sotschi keine Erneuerung des Getreideabkommens aushandeln können. Erst bei Erfüllung aller russischer Forderungen wolle der Kreml das Abkommen wieder einsetzten, bekräftigte Putin bei einer Pressekonferenz in Sotschi am Schwarzen Meer.Zuerst müssten aber die Beschränkungen für den Export von russischen Agrarprodukten aufgehoben werden, hieß es. Putin beklagte einmal mehr, dass die westlichen Sanktionen den Export von russischem Getreide, von Dünger und Agrartechnik behindern würden. Zeitgleich kündigte der Kremlchef erneut kostenlose russische Getreidelieferungen an sechs afrikanische Länder an.",
+                "additionalText": "",
+                "tags":[
+                    "Putin",
+                    "Erdogan"
+                ],
+                "reporter": "Über dieses Thema berichtete am 04. September 2023 Inforadio um 15:25 Uhr und die tagesschau um 16:00 Uhr."
+            
+            },
+            {
                 "title": "Klimaaktivisten sorgen für Verkehrschaos auf der Konrad-Adenauer-Brücke in Mannheim",
                 "publish_time": "2023-09-03T00:19Z",
                 "path": "https://images.tagesschau.de/image/214c290d-943a-4ee9-a115-3b99c10f5dea/AAABilZYEys/AAABibBx2rU/20x9-1280/swr-klima-aktivisten-kleben-sich-an-der-konrad-adenauer-bruecke-fest-und-blockieren-den-verkehr-100.webp",
